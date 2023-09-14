@@ -1,0 +1,470 @@
+40 messages loaded from file messagesTCH.txt
+23 messages loaded from file messagesSTD.txt
+0 Asserts Loaded
+[0] User program list:
+	Program [Pr1] with arrival time [10]
+	Program [Pr1] with arrival time [10]
+	Program [Pr2] with arrival time [10]
+	Program [Pr3] with arrival time [9]
+	Program [Pr3] with arrival time [30]
+	Program [Pr3] with arrival time [30]
+	[0] Running Process Information:
+		[--- No running process ---]
+	[0] Ready-to-run processes queue:
+	USER:
+	DAEMONS:
+	[0] SLEEPING Queue:
+		[--- empty queue ---]
+	[0] PID association with program's name:
+	[0] Arrival Time Queue:
+		[SystemIdleProcess, 0, DAEMONS]
+		[Pr3, 9, USER]
+		[Pr1, 10, USER]
+		[Pr2, 10, USER]
+		[Pr1, 10, USER]
+		[Pr3, 30, USER]
+		[Pr3, 30, USER]
+	[0] Main memory state (during system initialization):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][AVAILABLE]
+		[2] [100 -> 64][AVAILABLE]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][AVAILABLE]
+	[0] Process [3 - SystemIdleProcess] requests [4] memory positions
+	[0] Partition [1: 96 -> 4] has been assigned to process [3 - SystemIdleProcess]
+	[0] Main memory state (before_allocating_memory):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][AVAILABLE]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][AVAILABLE]
+	[0] New process [3 - SystemIdleProcess] moving to the [NEW] state
+	[0] Main memory state (after_allocating_memory):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][AVAILABLE]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][AVAILABLE]
+	[0] Process [3] created from program [SystemIdleProcess]
+	[0] Process [3 - SystemIdleProcess] moving from the [NEW] state to the [READY] state
+	[0] Running Process Information:
+		[--- No running process ---]
+	[0] Ready-to-run processes queue:
+	USER:
+	DAEMONS:[3,100]
+	[0] SLEEPING Queue:
+		[--- empty queue ---]
+	[0] PID association with program's name:
+		PID: 3 -> SystemIdleProcess
+	[0] Arrival Time Queue:
+		[Pr3, 9, USER]
+		[Pr1, 10, USER]
+		[Pr1, 10, USER]
+		[Pr2, 10, USER]
+		[Pr3, 30, USER]
+		[Pr3, 30, USER]
+	[0] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+[1] {0D 000 000} IRET 0 0 (PID: 3, PC: 96, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[2] {01 57C 2CE} ADD 1404 718 (PID: 3, PC: 97, Accumulator: 2122, PSW: 0080 [--------X-------])
+[3] {05 000 000} NOP 0 0 (PID: 3, PC: 98, Accumulator: 2122, PSW: 0080 [--------X-------])
+[4] {06 801 000} JUMP -1 0 (PID: 3, PC: 97, Accumulator: 2122, PSW: 0080 [--------X-------])
+[5] {05 000 000} NOP 0 0 (PID: 3, PC: 98, Accumulator: 2122, PSW: 0080 [--------X-------])
+[6] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2122, PSW: 8080 [M-------X-------])
+	[7] Clock interrupt number [1] has occurred
+[8] {0D 000 000} IRET 0 0 (PID: 3, PC: 98, Accumulator: 2122, PSW: 0080 [--------X-------])
+[9] {06 801 000} JUMP -1 0 (PID: 3, PC: 97, Accumulator: 2122, PSW: 0080 [--------X-------])
+[10] {05 000 000} NOP 0 0 (PID: 3, PC: 98, Accumulator: 2122, PSW: 0080 [--------X-------])
+[11] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2122, PSW: 8080 [M-------X-------])
+	[12] Clock interrupt number [2] has occurred
+	[12] Process [0 - SystemIdleProcess] requests [60] memory positions
+	[12] Partition [2: 100 -> 64] has been assigned to process [0 - Pr3]
+	[12] Main memory state (before_allocating_memory):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][0 - SystemIdleProcess]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][AVAILABLE]
+	[12] New process [0 - Pr3] moving to the [NEW] state
+	[12] Main memory state (after_allocating_memory):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][0 - Pr3]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][AVAILABLE]
+	[12] Process [0] created from program [Pr3]
+	[12] Process [0 - Pr3] moving from the [NEW] state to the [READY] state
+	[12] Process [1 - SystemIdleProcess] requests [16] memory positions
+	[12] Partition [5: 208 -> 16] has been assigned to process [1 - Pr1]
+	[12] Main memory state (before_allocating_memory):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][0 - Pr3]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][1 - SystemIdleProcess]
+		[6] [224 -> 16][AVAILABLE]
+	[12] New process [1 - Pr1] moving to the [NEW] state
+	[12] Main memory state (after_allocating_memory):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][0 - Pr3]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][1 - Pr1]
+		[6] [224 -> 16][AVAILABLE]
+	[12] Process [1] created from program [Pr1]
+	[12] Process [1 - Pr1] moving from the [NEW] state to the [READY] state
+	[12] Process [2 - SystemIdleProcess] requests [16] memory positions
+	[12] Partition [6: 224 -> 16] has been assigned to process [2 - Pr1]
+	[12] Main memory state (before_allocating_memory):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][0 - Pr3]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][1 - Pr1]
+		[6] [224 -> 16][2 - SystemIdleProcess]
+	[12] New process [2 - Pr1] moving to the [NEW] state
+	[12] Main memory state (after_allocating_memory):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][0 - Pr3]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][1 - Pr1]
+		[6] [224 -> 16][2 - Pr1]
+	[12] Process [2] created from program [Pr1]
+	[12] Process [2 - Pr1] moving from the [NEW] state to the [READY] state
+	[12] ERROR: There are not free entries in the process table for the program [Pr2]
+	[12] Process creation from program [Pr2] has been postponed
+	[12] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[12] Ready-to-run processes queue:
+	USER:[1,2], [0,5], [2,2]
+	DAEMONS:
+	[12] SLEEPING Queue:
+		[--- empty queue ---]
+	[12] PID association with program's name:
+		PID: 0 -> Pr3
+		PID: 1 -> Pr1
+		PID: 2 -> Pr1
+		PID: 3 -> SystemIdleProcess
+	[12] Arrival Time Queue:
+		[Pr3, 30, USER]
+		[Pr3, 30, USER]
+	[12] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[12] Ready-to-run processes queue:
+	USER:[1,2], [0,5], [2,2]
+	DAEMONS:
+	[12] SLEEPING Queue:
+		[--- empty queue ---]
+	[12] PID association with program's name:
+		PID: 0 -> Pr3
+		PID: 1 -> Pr1
+		PID: 2 -> Pr1
+		PID: 3 -> SystemIdleProcess
+	[12] Arrival Time Queue:
+		[Pr3, 30, USER]
+		[Pr3, 30, USER]
+	[12] Process [3 - SystemIdleProcess] will be thrown out of the processor by process [1 - Pr1]
+	[12] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [READY] state
+	[12] Process [1 - Pr1] moving from the [READY] state to the [EXECUTING] state
+	[12] Running Process Information:
+		[PID: 1, Priority: 2, WakeUp: 0, Queue: USER]
+	[12] Ready-to-run processes queue:
+	USER:[2,2], [0,5]
+	DAEMONS:[3,100]
+	[12] SLEEPING Queue:
+		[--- empty queue ---]
+	[12] PID association with program's name:
+		PID: 0 -> Pr3
+		PID: 1 -> Pr1
+		PID: 2 -> Pr1
+		PID: 3 -> SystemIdleProcess
+	[12] Arrival Time Queue:
+		[Pr3, 30, USER]
+		[Pr3, 30, USER]
+[13] {0D 000 000} IRET 0 0 (PID: 1, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[14] {04 003 000} TRAP 3 0 (PID: 1, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[15] {0C 002 000} OS 2 0 (PID: 1, PC: 242, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[16] Process [1 - Pr1] has requested to terminate
+	[16] Process [1 - Pr1] moving from the [EXECUTING] state to the [EXIT] state
+	[16] Main memory state (before_releasing_memory):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][0 - Pr3]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][1 - Pr1]
+		[6] [224 -> 16][2 - Pr1]
+	[16] Partition [5: 208 -> 16] used by process [1 - Pr1] has been released
+	[16] Main memory state (after_releasing_memory):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][0 - Pr3]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][2 - Pr1]
+	[16] Process [2 - Pr1] moving from the [READY] state to the [EXECUTING] state
+	[16] Running Process Information:
+		[PID: 2, Priority: 2, WakeUp: 0, Queue: USER]
+	[16] Ready-to-run processes queue:
+	USER:[0,5]
+	DAEMONS:[3,100]
+	[16] SLEEPING Queue:
+		[--- empty queue ---]
+	[16] PID association with program's name:
+		PID: 0 -> Pr3
+		PID: 1 -> Pr1
+		PID: 2 -> Pr1
+		PID: 3 -> SystemIdleProcess
+	[16] Arrival Time Queue:
+		[Pr3, 30, USER]
+		[Pr3, 30, USER]
+[17] {0D 000 000} IRET 0 0 (PID: 2, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[18] {0C 009 000} OS 9 0 (PID: 2, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[19] Clock interrupt number [3] has occurred
+[20] {0D 000 000} IRET 0 0 (PID: 2, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[21] {0C 009 000} OS 9 0 (PID: 2, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[22] Clock interrupt number [4] has occurred
+[23] {0D 000 000} IRET 0 0 (PID: 2, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[24] {04 003 000} TRAP 3 0 (PID: 2, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[25] {0C 002 000} OS 2 0 (PID: 2, PC: 242, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[26] Process [2 - Pr1] has requested to terminate
+	[26] Process [2 - Pr1] moving from the [EXECUTING] state to the [EXIT] state
+	[26] Main memory state (before_releasing_memory):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][0 - Pr3]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][2 - Pr1]
+	[26] Partition [6: 224 -> 16] used by process [2 - Pr1] has been released
+	[26] Main memory state (after_releasing_memory):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][0 - Pr3]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][AVAILABLE]
+	[26] Process [0 - Pr3] moving from the [READY] state to the [EXECUTING] state
+	[26] Running Process Information:
+		[PID: 0, Priority: 5, WakeUp: 0, Queue: USER]
+	[26] Ready-to-run processes queue:
+	USER:
+	DAEMONS:[3,100]
+	[26] SLEEPING Queue:
+		[--- empty queue ---]
+	[26] PID association with program's name:
+		PID: 0 -> Pr3
+		PID: 1 -> Pr1
+		PID: 2 -> Pr1
+		PID: 3 -> SystemIdleProcess
+	[26] Arrival Time Queue:
+		[Pr3, 30, USER]
+		[Pr3, 30, USER]
+[27] {0D 000 000} IRET 0 0 (PID: 0, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[28] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[29] Clock interrupt number [5] has occurred
+[30] {0D 000 000} IRET 0 0 (PID: 0, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[31] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[32] Clock interrupt number [6] has occurred
+	[32] Zombie process [1 -> Pr1], with size [16] and initial address [208] is removed from system
+	[32] Zombie process [2 -> Pr1], with size [16] and initial address [224] is removed from system
+	[32] Process [1 - Pr1] requests [60] memory positions
+	[32] Partition [0: 0 -> 96] has been assigned to process [1 - Pr3]
+	[32] Main memory state (before_allocating_memory):
+		[0] [0 -> 96][1 - Pr1]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][0 - Pr3]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][AVAILABLE]
+	[32] New process [1 - Pr3] moving to the [NEW] state
+	[32] Main memory state (after_allocating_memory):
+		[0] [0 -> 96][1 - Pr3]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][0 - Pr3]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][AVAILABLE]
+	[32] Process [1] created from program [Pr3]
+	[32] Process [1 - Pr3] moving from the [NEW] state to the [READY] state
+	[32] Process [2 - Pr1] requests [60] memory positions
+	[32] ERROR: A process could not be created from program [Pr3] because an appropiate partition is not available
+	[32] Process creation from program [Pr3] has been postponed
+	[32] Running Process Information:
+		[PID: 0, Priority: 5, WakeUp: 0, Queue: USER]
+	[32] Ready-to-run processes queue:
+	USER:[1,5]
+	DAEMONS:[3,100]
+	[32] SLEEPING Queue:
+		[--- empty queue ---]
+	[32] PID association with program's name:
+		PID: 0 -> Pr3
+		PID: 1 -> Pr3
+		PID: 3 -> SystemIdleProcess
+	[32] Running Process Information:
+		[PID: 0, Priority: 5, WakeUp: 0, Queue: USER]
+	[32] Ready-to-run processes queue:
+	USER:[1,5]
+	DAEMONS:[3,100]
+	[32] SLEEPING Queue:
+		[--- empty queue ---]
+	[32] PID association with program's name:
+		PID: 0 -> Pr3
+		PID: 1 -> Pr3
+		PID: 3 -> SystemIdleProcess
+[33] {0D 000 000} IRET 0 0 (PID: 0, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[34] {01 014 000} ADD 20 0 (PID: 0, PC: 1, Accumulator: 20, PSW: 0000 [----------------])
+[35] {01 014 00A} ADD 20 10 (PID: 0, PC: 2, Accumulator: 30, PSW: 0000 [----------------])
+[36] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: 30, PSW: 8080 [M-------X-------])
+	[37] Clock interrupt number [7] has occurred
+[38] {0D 000 000} IRET 0 0 (PID: 0, PC: 2, Accumulator: 30, PSW: 0000 [----------------])
+[39] {08 00A 000} WRITE 10 0 (PID: 0, PC: 3, Accumulator: 30, PSW: 0000 [----------------])
+[40] {0E 00A 007} MEMADD 10 7 (PID: 0, PC: 4, Accumulator: 10, PSW: 0000 [----------------])
+[41] {0C 009 000} OS 9 0 (PID: 0, PC: 246, Accumulator: 10, PSW: 8080 [M-------X-------])
+	[42] Clock interrupt number [8] has occurred
+[43] {0D 000 000} IRET 0 0 (PID: 0, PC: 4, Accumulator: 10, PSW: 0000 [----------------])
+[44] {04 003 000} TRAP 3 0 (PID: 0, PC: 5, Accumulator: 10, PSW: 0000 [----------------])
+[45] {0C 002 000} OS 2 0 (PID: 0, PC: 242, Accumulator: 10, PSW: 8080 [M-------X-------])
+	[46] Process [0 - Pr3] has requested to terminate
+	[46] Process [0 - Pr3] moving from the [EXECUTING] state to the [EXIT] state
+	[46] Main memory state (before_releasing_memory):
+		[0] [0 -> 96][1 - Pr3]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][0 - Pr3]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][AVAILABLE]
+	[46] Partition [2: 100 -> 64] used by process [0 - Pr3] has been released
+	[46] Main memory state (after_releasing_memory):
+		[0] [0 -> 96][1 - Pr3]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][AVAILABLE]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][AVAILABLE]
+	[46] Process [1 - Pr3] moving from the [READY] state to the [EXECUTING] state
+	[46] Running Process Information:
+		[PID: 1, Priority: 5, WakeUp: 0, Queue: USER]
+	[46] Ready-to-run processes queue:
+	USER:
+	DAEMONS:[3,100]
+	[46] SLEEPING Queue:
+		[--- empty queue ---]
+	[46] PID association with program's name:
+		PID: 0 -> Pr3
+		PID: 1 -> Pr3
+		PID: 3 -> SystemIdleProcess
+[47] {0D 000 000} IRET 0 0 (PID: 1, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[48] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[49] Clock interrupt number [9] has occurred
+[50] {0D 000 000} IRET 0 0 (PID: 1, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[51] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+	[52] Clock interrupt number [10] has occurred
+[53] {0D 000 000} IRET 0 0 (PID: 1, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[54] {01 014 000} ADD 20 0 (PID: 1, PC: 1, Accumulator: 20, PSW: 0000 [----------------])
+[55] {01 014 00A} ADD 20 10 (PID: 1, PC: 2, Accumulator: 30, PSW: 0000 [----------------])
+[56] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 30, PSW: 8080 [M-------X-------])
+	[57] Clock interrupt number [11] has occurred
+[58] {0D 000 000} IRET 0 0 (PID: 1, PC: 2, Accumulator: 30, PSW: 0000 [----------------])
+[59] {08 00A 000} WRITE 10 0 (PID: 1, PC: 3, Accumulator: 30, PSW: 0000 [----------------])
+[60] {0E 00A 007} MEMADD 10 7 (PID: 1, PC: 4, Accumulator: 10, PSW: 0000 [----------------])
+[61] {0C 009 000} OS 9 0 (PID: 1, PC: 246, Accumulator: 10, PSW: 8080 [M-------X-------])
+	[62] Clock interrupt number [12] has occurred
+[63] {0D 000 000} IRET 0 0 (PID: 1, PC: 4, Accumulator: 10, PSW: 0000 [----------------])
+[64] {04 003 000} TRAP 3 0 (PID: 1, PC: 5, Accumulator: 10, PSW: 0000 [----------------])
+[65] {0C 002 000} OS 2 0 (PID: 1, PC: 242, Accumulator: 10, PSW: 8080 [M-------X-------])
+	[66] Process [1 - Pr3] has requested to terminate
+	[66] Process [1 - Pr3] moving from the [EXECUTING] state to the [EXIT] state
+	[66] Main memory state (before_releasing_memory):
+		[0] [0 -> 96][1 - Pr3]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][AVAILABLE]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][AVAILABLE]
+	[66] Partition [0: 0 -> 96] used by process [1 - Pr3] has been released
+	[66] Main memory state (after_releasing_memory):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][AVAILABLE]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][AVAILABLE]
+	[66] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+	[66] Running Process Information:
+		[PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+	[66] Ready-to-run processes queue:
+	USER:
+	DAEMONS:
+	[66] SLEEPING Queue:
+		[--- empty queue ---]
+	[66] PID association with program's name:
+		PID: 0 -> Pr3
+		PID: 1 -> Pr3
+		PID: 3 -> SystemIdleProcess
+[67] {0D 000 000} IRET 0 0 (PID: 3, PC: 99, Accumulator: 2122, PSW: 0080 [--------X-------])
+[68] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2122, PSW: 8080 [M-------X-------])
+	[69] Clock interrupt number [13] has occurred
+[70] {0D 000 000} IRET 0 0 (PID: 3, PC: 99, Accumulator: 2122, PSW: 0080 [--------X-------])
+[71] {0C 009 000} OS 9 0 (PID: 3, PC: 246, Accumulator: 2122, PSW: 8080 [M-------X-------])
+	[72] Clock interrupt number [14] has occurred
+[73] {0D 000 000} IRET 0 0 (PID: 3, PC: 99, Accumulator: 2122, PSW: 0080 [--------X-------])
+[74] {04 003 000} TRAP 3 0 (PID: 3, PC: 100, Accumulator: 2122, PSW: 0080 [--------X-------])
+[75] {0C 002 000} OS 2 0 (PID: 3, PC: 242, Accumulator: 2122, PSW: 8080 [M-------X-------])
+	[76] Process [3 - SystemIdleProcess] has requested to terminate
+	[76] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [EXIT] state
+	[76] Main memory state (before_releasing_memory):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][3 - SystemIdleProcess]
+		[2] [100 -> 64][AVAILABLE]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][AVAILABLE]
+	[76] Partition [1: 96 -> 4] used by process [3 - SystemIdleProcess] has been released
+	[76] Main memory state (after_releasing_memory):
+		[0] [0 -> 96][AVAILABLE]
+		[1] [96 -> 4][AVAILABLE]
+		[2] [100 -> 64][AVAILABLE]
+		[3] [164 -> 12][AVAILABLE]
+		[4] [176 -> 32][AVAILABLE]
+		[5] [208 -> 16][AVAILABLE]
+		[6] [224 -> 16][AVAILABLE]
+	[76] The system will shut down now...
+	[76] Running Process Information:
+		[--- No running process ---]
+	[76] Ready-to-run processes queue:
+	USER:
+	DAEMONS:
+	[76] SLEEPING Queue:
+		[--- empty queue ---]
+	[76] PID association with program's name:
+		PID: 0 -> Pr3
+		PID: 1 -> Pr3
+		PID: 3 -> SystemIdleProcess
+[77] {0D 000 000} IRET 0 0 (PID: -1, PC: 241, Accumulator: 2122, PSW: 8080 [M-------X-------])
+[78] {0B 000 000} HALT 0 0 (PID: -1, PC: 241, Accumulator: 2122, PSW: 8081 [M-------X------S])
+END of the simulation

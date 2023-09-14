@@ -1,0 +1,135 @@
+Omar Teixeira González, UO281847:
+Ejercicio 1:
+
+En messagesSTD.txt:
+
+122,@MSyscall [%s] has been executed [%d] times@@\n
+
+En OperatingSystem.c:
+
+//Examen-V2
+int numberOfEndCalls = 0;
+int numberOfYieldCalls = 0;
+int numberOfPrintExeCPIDCalls = 0;
+int numberOfSleepCalls = 0;
+
+// System call management routine
+void OperatingSystem_HandleSystemCall() {  
+
+	int systemCallID;
+	int previousProcessID;
+	int newProcessID;
+
+	// Register A contains the identifier of the issued system call
+	systemCallID=Processor_GetRegisterA();
+	
+	switch (systemCallID) {
+		case SYSCALL_PRINTEXECPID:
+			//Examen-V2
+			numberOfPrintExeCPIDCalls++;
+			// Show message: "Process [executingProcessID] has the processor assigned\n"
+			//V2-EX1-BEGIN
+			OperatingSystem_ShowTime(SYSPROC);
+			//V2-EX1-END
+			ComputerSystem_DebugMessage(72,SYSPROC,executingProcessID,programList[processTable[executingProcessID].programListIndex]->executableName);			
+			break;
+
+		//V1-EX12-BEGIN
+		case SYSCALL_YIELD:
+			//Examen-V2
+			numberOfYieldCalls++;
+			if(numberOfReadyToRunProcesses[processTable[executingProcessID].queueID] > 0 && processTable[readyToRunQueue[processTable[executingProcessID].queueID][0].info].priority == processTable[executingProcessID].priority) {
+				previousProcessID = executingProcessID;
+				newProcessID = readyToRunQueue[processTable[executingProcessID].queueID][0].info;				
+
+				//V2-EX1-BEGIN
+				OperatingSystem_ShowTime(SHORTTERMSCHEDULE);
+				//V2-EX1-END
+				ComputerSystem_DebugMessage(115, SHORTTERMSCHEDULE, previousProcessID, programList[processTable[previousProcessID].programListIndex]->executableName, newProcessID, programList[processTable[newProcessID].programListIndex]->executableName);
+
+				OperatingSystem_PreemptRunningProcess();
+				OperatingSystem_Dispatch(OperatingSystem_ShortTermScheduler());
+				//V2-EX7a-BEGIN
+				OperatingSystem_PrintStatus();
+				//V2-EX7a-END
+			}			
+			break;
+		//V1-EX12-END
+
+		case SYSCALL_END:
+			//Examen-V2
+			numberOfEndCalls++;
+			// Show message: "Process [executingProcessID] has requested to terminate\n"
+			//V2-EX1-BEGIN
+			OperatingSystem_ShowTime(SYSPROC);
+			//V2-EX1-END
+			ComputerSystem_DebugMessage(73,SYSPROC,executingProcessID,programList[processTable[executingProcessID].programListIndex]->executableName);
+			OperatingSystem_TerminateProcess();
+			//V2-EX7b-BEGIN
+			OperatingSystem_PrintStatus();
+			//V2-EX7b-END		
+			break;
+
+		//V2-EX5d-BEGIN
+		case SYSCALL_SLEEP:						
+			//Examen-V2
+			numberOfSleepCalls++;
+			OperatingSystem_MoveToTheBLOCKEDState(executingProcessID);
+			OperatingSystem_Dispatch(OperatingSystem_ShortTermScheduler());
+			//V2-EX5e-BEGIN
+			OperatingSystem_PrintStatus();
+			//V2-EX5e-END			
+			break;
+		//V2-EX5d-END
+	}
+}
+
+// All tasks regarding the removal of the process
+void OperatingSystem_TerminateProcess() {
+  
+	int selectedProcess;
+	
+	//V1-EX10b-BEGIN
+  	int previousState = processTable[executingProcessID].state;
+	processTable[executingProcessID].state=EXIT;
+	//V2-EX1-BEGIN
+	OperatingSystem_ShowTime(SYSPROC);
+	//V2-EX1-END
+	ComputerSystem_DebugMessage(110, SYSPROC, executingProcessID, programList[processTable[executingProcessID].programListIndex]->executableName, statesNames[previousState], statesNames[EXIT]);
+	//V1-EX10b-END
+
+	if (programList[processTable[executingProcessID].programListIndex]->type==USERPROGRAM) 
+		// One more user process that has terminated
+		numberOfNotTerminatedUserProcesses--;
+	
+	if (numberOfNotTerminatedUserProcesses==0) {
+		if (executingProcessID==sipID) {
+			// finishing sipID, change PC to address of OS HALT instruction
+			OperatingSystem_TerminatingSIP();
+			//V2-EX1-BEGIN
+			OperatingSystem_ShowTime(SHUTDOWN);
+			//V2-EX1-END
+			ComputerSystem_DebugMessage(99,SHUTDOWN,"The system will shut down now...\n");
+			//Examen-V2
+			OperatingSystem_ShowTime(EXAM);
+			ComputerSystem_DebugMessage(122,EXAM, "END", numberOfEndCalls);
+			OperatingSystem_ShowTime(EXAM);
+			ComputerSystem_DebugMessage(122,EXAM, "YIELD", numberOfYieldCalls);
+			OperatingSystem_ShowTime(EXAM);
+			ComputerSystem_DebugMessage(122,EXAM, "PRINTEXECPID", numberOfPrintExeCPIDCalls);
+			OperatingSystem_ShowTime(EXAM);
+			ComputerSystem_DebugMessage(122,EXAM, "SLEEP", numberOfSleepCalls);
+			return; // Don't dispatch any process
+		}
+		// Simulation must finish, telling sipID to finish
+		OperatingSystem_ReadyToShutdown();
+	}
+	// Select the next process to execute (sipID if no more user processes)
+	selectedProcess=OperatingSystem_ShortTermScheduler();
+
+	// Assign the processor to that process
+	OperatingSystem_Dispatch(selectedProcess);
+}
+
+Probado con:
+./Simulator --debugSections=XD ex1 ex2 ex3

@@ -1,0 +1,15 @@
+DEBUGSECTION(ALL,'a') // Show all the messages corresponding to calls to the  ComputerSystem_DebugMessage() function
+DEBUGSECTION(NONE,'n') // Do not show any message (not apply for ERROR messages)
+DEBUGSECTION(INTERRUPT,'i') // Only messages related to interruptions
+DEBUGSECTION(HARDWARE,'h') // Only messages related to the hardware
+DEBUGSECTION(SYSFILE,'f') // Only messages related to the file system of the operating system
+DEBUGSECTION(SYSPROC,'p') // Only messages related to the process management system of the operating system
+DEBUGSECTION(SYSMEM,'m')  // Only messages related to the memory management system of the operating system
+DEBUGSECTION(INIT,'t') // Only messages related to the initialization of the operating system
+DEBUGSECTION(SHUTDOWN,'d') // Only messages related to the process of powering off the simulator
+DEBUGSECTION(POWERON,'o') // Only messages related to the process of powering on the simulator
+DEBUGSECTION(LONGTERMSCHEDULE,'l') // Only messages related to the long term scheduler of the operating system
+DEBUGSECTION(SHORTTERMSCHEDULE,'s') // Only messages related to the short term scheduler of the operating system
+DEBUGSECTION(ERROR,'e') // Error messages
+DEBUGSECTION(CLOCK,'c') // Clock time messages
+DEBUGSECTION(EXAM,'x') // Only messages related to questions in exams

@@ -1,0 +1,25 @@
+// Students created messages
+// Format: numberOfMessage,textPrintfFormatedWithColourCodes
+//
+// numbers of messages greather than 100 for students
+//
+101,User program list:\n
+102,\tProgram [@C%s@@] with arrival time [@C%d@@]\n
+103,@RERROR: There are not free entries in the process table for the program [%s]@@\n
+104,@RERROR: Program [%s] is not valid [--%s--]@@\n
+105,@RERROR: Program [%s] is too big@@\n
+
+//V1-EX9-BEGIN
+106,Ready-to-run processes queue:\n\t
+107,[@G%d@@,%d], 
+108,[@G%d@@,%d]\n
+//V1-EX9-END
+
+//V1-EX10-BEGIN
+110,Process [@G%d - %s@@] moving from the [@G%s@@] state to the [@G%s@@] state\n
+111,New process [@G%d - %s@@] moving to the [@G%s@@] state\n
+//V1-EX10-END
+
+//V1-EX11b-BEGIN
+
+//V1-EX11b-END

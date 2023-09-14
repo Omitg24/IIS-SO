@@ -1,0 +1,174 @@
+Omar Teixeira González, UO281847:
+Ejercicio 2:
+
+En messagesSTD.txt:
+122,@MProcess [%d - %s] modifies its priority from [%d] to [%d]@@\n
+
+En OperatingSystem.c:
+// System call management routine
+void OperatingSystem_HandleSystemCall() {  
+
+	int systemCallID;
+	int previousProcessID;
+	int newProcessID;
+
+	int previousPriority;
+
+	// Register A contains the identifier of the issued system call
+	systemCallID=Processor_GetRegisterA();
+	
+	switch (systemCallID) {
+		case SYSCALL_PRINTEXECPID:
+			// Show message: "Process [executingProcessID] has the processor assigned\n"
+			//V2-EX1-BEGIN
+			OperatingSystem_ShowTime(SYSPROC);
+			//V2-EX1-END
+			ComputerSystem_DebugMessage(72,SYSPROC,executingProcessID,programList[processTable[executingProcessID].programListIndex]->executableName);
+			break;
+
+		//V1-EX12-BEGIN
+		case SYSCALL_YIELD:
+			if(numberOfReadyToRunProcesses[processTable[executingProcessID].queueID] > 0 && processTable[readyToRunQueue[processTable[executingProcessID].queueID][0].info].priority == processTable[executingProcessID].priority) {
+				previousProcessID = executingProcessID;
+				newProcessID = readyToRunQueue[processTable[executingProcessID].queueID][0].info;				
+	
+				//Examen-V2
+				if (processTable[previousProcessID].queueID == USERPROCESSQUEUE) {
+					previousPriority = processTable[previousProcessID].priority;
+					processTable[previousProcessID].priority=processTable[newProcessID].priority;
+				} else if (processTable[previousProcessID].queueID == DAEMONSQUEUE){
+					previousPriority = processTable[previousProcessID].priority;
+					processTable[previousProcessID].priority = processTable[previousProcessID].priority - 25;
+					if (processTable[previousProcessID].priority < 0) {
+						processTable[previousProcessID].priority = 0;
+					}
+				}				
+				OperatingSystem_ShowTime(EXAM);
+				ComputerSystem_DebugMessage(122, EXAM, previousProcessID, programList[processTable[previousProcessID].programListIndex]->executableName, previousPriority, processTable[previousProcessID].priority);		
+
+				//V2-EX1-BEGIN
+				OperatingSystem_ShowTime(SHORTTERMSCHEDULE);
+				//V2-EX1-END
+				ComputerSystem_DebugMessage(115, SHORTTERMSCHEDULE, previousProcessID, programList[processTable[previousProcessID].programListIndex]->executableName, newProcessID, programList[processTable[newProcessID].programListIndex]->executableName);
+
+				OperatingSystem_PreemptRunningProcess();
+				OperatingSystem_Dispatch(OperatingSystem_ShortTermScheduler());
+				//V2-EX7a-BEGIN
+				OperatingSystem_PrintStatus();
+				//V2-EX7a-END
+			}
+			break;
+		//V1-EX12-END
+
+		case SYSCALL_END:
+			// Show message: "Process [executingProcessID] has requested to terminate\n"
+			//V2-EX1-BEGIN
+			OperatingSystem_ShowTime(SYSPROC);
+			//V2-EX1-END
+			ComputerSystem_DebugMessage(73,SYSPROC,executingProcessID,programList[processTable[executingProcessID].programListIndex]->executableName);
+			OperatingSystem_TerminateProcess();
+			//V2-EX7b-BEGIN
+			OperatingSystem_PrintStatus();
+			//V2-EX7b-END
+			break;
+
+		//V2-EX5d-BEGIN
+		case SYSCALL_SLEEP:						
+			OperatingSystem_MoveToTheBLOCKEDState(executingProcessID);
+			OperatingSystem_Dispatch(OperatingSystem_ShortTermScheduler());
+			//V2-EX5e-BEGIN
+			OperatingSystem_PrintStatus();
+			//V2-EX5e-END
+			break;
+		//V2-EX5d-END
+	}
+}
+
+//V2-EX2b-BEGIN
+void OperatingSystem_HandleClockInterrupt(){ 
+
+	int previousProcessID;
+	int mostPriorityProcessID;
+	int sleepingProcessWhenToWakeUp;
+	int numberOfUnblockedProcesses = 0;
+	//Examen-V2
+	int previousPriority;
+
+	//V2-EX4-BEGIN
+	numberOfClockInterrupts++;
+	OperatingSystem_ShowTime(INTERRUPT);
+	ComputerSystem_DebugMessage(120, INTERRUPT, numberOfClockInterrupts);
+	//V2-EX4-END
+	//V2-EX6a-BEGIN
+	sleepingProcessWhenToWakeUp=processTable[Heap_getFirst(sleepingProcessesQueue, numberOfSleepingProcesses)].whenToWakeUp;
+	while (numberOfSleepingProcesses>0 && sleepingProcessWhenToWakeUp==numberOfClockInterrupts){
+		OperatingSystem_MoveToTheREADYState(OperatingSystem_ExtractFromSleepingProcessesQueue());			
+		numberOfUnblockedProcesses++;
+	}	
+	//V2-EX6a-END
+	//V2-EX6b-BEGIN
+	if (numberOfUnblockedProcesses>0){
+		OperatingSystem_PrintStatus();				
+		//V2-EX6c-BEGIN
+		mostPriorityProcessID = OperatingSystem_GetMostPriorityProcess();
+		if (mostPriorityProcessID != NOPROCESS){
+			if (processTable[executingProcessID].queueID == processTable[mostPriorityProcessID].queueID) {
+				if (processTable[executingProcessID].priority > processTable[mostPriorityProcessID].priority ){
+					previousProcessID = executingProcessID;
+
+					//Examen-V2
+					if (processTable[previousProcessID].queueID == USERPROCESSQUEUE) {
+						previousPriority = processTable[previousProcessID].priority;
+						processTable[previousProcessID].priority=processTable[mostPriorityProcessID].priority;
+					} else if (processTable[previousProcessID].queueID == DAEMONSQUEUE){
+						previousPriority = processTable[previousProcessID].priority;
+						processTable[previousProcessID].priority = processTable[previousProcessID].priority - 25;
+						if (processTable[previousProcessID].priority < 0) {
+							processTable[previousProcessID].priority = 0;
+						}
+					}				
+					OperatingSystem_ShowTime(EXAM);
+					ComputerSystem_DebugMessage(122, EXAM, previousProcessID, programList[processTable[previousProcessID].programListIndex]->executableName, previousPriority, processTable[previousProcessID].priority);	
+
+					OperatingSystem_ShowTime(SHORTTERMSCHEDULE);
+					ComputerSystem_DebugMessage(121, SHORTTERMSCHEDULE, previousProcessID, programList[processTable[previousProcessID].programListIndex]->executableName, mostPriorityProcessID, programList[processTable[mostPriorityProcessID].programListIndex]->executableName);
+
+					OperatingSystem_PreemptRunningProcess();
+					OperatingSystem_Dispatch(OperatingSystem_ShortTermScheduler());			
+					
+				}	
+			} else if (processTable[executingProcessID].queueID == DAEMONSQUEUE && processTable[mostPriorityProcessID].queueID == USERPROCESSQUEUE){
+				previousProcessID = executingProcessID;
+
+				//Examen-V2
+				if (processTable[previousProcessID].queueID == USERPROCESSQUEUE) {
+					previousPriority = processTable[previousProcessID].priority;
+					processTable[previousProcessID].priority=processTable[mostPriorityProcessID].priority;
+				} else if (processTable[previousProcessID].queueID == DAEMONSQUEUE){
+					previousPriority = processTable[previousProcessID].priority;
+					processTable[previousProcessID].priority = processTable[previousProcessID].priority - 25;
+					if (processTable[previousProcessID].priority < 0) {
+						processTable[previousProcessID].priority = 0;
+					}
+				}				
+				OperatingSystem_ShowTime(EXAM);
+				ComputerSystem_DebugMessage(122, EXAM, previousProcessID, programList[processTable[previousProcessID].programListIndex]->executableName, previousPriority, processTable[previousProcessID].priority);	
+
+				OperatingSystem_ShowTime(SHORTTERMSCHEDULE);
+				ComputerSystem_DebugMessage(121, SHORTTERMSCHEDULE, previousProcessID, programList[processTable[previousProcessID].programListIndex]->executableName, mostPriorityProcessID, programList[processTable[mostPriorityProcessID].programListIndex]->executableName);
+
+				OperatingSystem_PreemptRunningProcess();
+				OperatingSystem_Dispatch(OperatingSystem_ShortTermScheduler());
+			}
+			//V2-EX6d-BEGIN
+			OperatingSystem_PrintStatus();
+			//V2-EX6d-END
+		}		
+		//V2-EX6c-END	
+	}
+	//V2-EX6b-END		
+}
+//V2-EX2b-END
+
+Probado con:
+./Simulator --debugSections=X ex4 ex5

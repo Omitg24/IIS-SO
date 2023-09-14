@@ -1,0 +1,142 @@
+Omar Teixeira González, UO281847:
+
+Modificaciones:
+	En OperatingSystem.c:
+		int OperatingSystem_GetNextFittingPartition(int);
+
+		int partitionCounter=0;
+
+		int OperatingSystem_CreateProcess(int indexOfExecutableProgram) {
+  
+			int PID;
+			int processSize;
+			int numberOfPartition;
+			int priority;
+			//V1-EX7a-BEGIN
+			int instructions;
+			//V1-EX7a-END
+			//V4-EX6c-BEGIN
+			int initAddress;
+			//V4-EX6c-END
+			FILE *programFile;
+			PROGRAMS_DATA *executableProgram=programList[indexOfExecutableProgram];
+
+			// Obtain a process ID
+			PID=OperatingSystem_ObtainAnEntryInTheProcessTable();
+			//V1-EX4a-BEGIN
+			if (PID==NOFREEENTRY){
+				return NOFREEENTRY;
+			}
+			//V1-EX4a-END
+			// Check if programFile exists
+			programFile=fopen(executableProgram->executableName, "r");
+
+			//V1-EX5b-BEGIN
+			if (programFile == NULL){
+				return PROGRAMDOESNOTEXIST;
+			}
+			//V1-EX5b-END
+			// Obtain the memory requirements of the program
+			processSize=OperatingSystem_ObtainProgramSize(programFile);		
+			// Obtain the priority for the process
+			priority=OperatingSystem_ObtainPriority(programFile);	
+			//V1-EX5c-END
+			if (processSize == PROGRAMNOTVALID || priority == PROGRAMNOTVALID){
+				return PROGRAMNOTVALID;
+			}
+
+			//V4-EX6b-BEGIN
+			OperatingSystem_ShowTime(SYSMEM);
+			ComputerSystem_DebugMessage(142,SYSMEM,PID,executableProgram->executableName,processSize);
+			//V4-EX6b-END	
+
+			//V1-EX5c-END
+			// Obtain enough memory space
+			//V4-EX6c-BEGIN
+			numberOfPartition=OperatingSystem_ObtainMainMemory(processSize, PID);
+			
+			//V1-EX6a-BEGIN	
+			if (numberOfPartition==TOOBIGPROCESS || numberOfPartition==MEMORYFULL){
+				return numberOfPartition;
+			} 	
+			
+			initAddress = partitionsTable[numberOfPartition].initAddress;
+
+			//V1-EX7a-BEGIN
+			// Load program in the allocated memory
+			instructions=OperatingSystem_LoadProgram(programFile, initAddress, processSize);
+			if (instructions==TOOBIGPROCESS){
+				return TOOBIGPROCESS;
+			}
+			//V1-EX7a-END
+
+			//V4-EX7-BEGIN
+			OperatingSystem_ShowPartitionTable("before allocating memory");
+			//V4-EX7-END
+
+			partitionsTable[numberOfPartition].PID=PID;	
+			processTable[PID].numberOfPartition = numberOfPartition;
+			//Examen-V4-EX1-BEGIN
+			partitionCounter=numberOfPartition+1;
+			//Examen-V4-EX1-END
+			OperatingSystem_ShowTime(SYSMEM);
+			ComputerSystem_DebugMessage(143, SYSMEM, numberOfPartition, initAddress, partitionsTable[numberOfPartition].size,PID,executableProgram->executableName);
+			//V4-EX6c-END		
+			//V1-EX6a-END	
+
+			// PCB initialization	
+			OperatingSystem_PCBInitialization(PID, initAddress, processSize, priority, indexOfExecutableProgram);
+			
+			//V4-EX7-BEGIN
+			OperatingSystem_ShowPartitionTable("after allocating memory");
+			//V4-EX7-END
+
+			// Show message "Process [PID] created from program [executableName]\n"
+			//V2-EX1-BEGIN
+			OperatingSystem_ShowTime(INIT);
+			//V2-EX1-END
+			ComputerSystem_DebugMessage(70,INIT,PID,executableProgram->executableName);
+			
+			return PID;	
+		}
+
+		int OperatingSystem_ObtainMainMemory(int processSize, int PID) {
+			int nextFit;	
+
+			if (processSize>OperatingSystem_GetBiggestPartitionSize()) {
+				return TOOBIGPROCESS;
+			}
+			nextFit = OperatingSystem_GetNextFittingPartition(processSize);	
+			return nextFit; 	
+		}
+
+		int OperatingSystem_GetNextFittingPartition(int processSize){	
+			for (int i=partitionCounter; i<=numberOfPartitions; i++) {
+				if (partitionsTable[i].PID == NOPROCESS && partitionsTable[i].size >= processSize) {													
+					return i;
+				}		
+				if (partitionCounter==numberOfPartitions) {
+					partitionCounter=0;
+					i=partitionCounter;
+				}
+			}	
+			return MEMORYFULL;
+		}
+
+Probado con la salida:
+	./Simulator --memConfigFile=MemConfigEx2 ex3 ex3 ex4 ex5 5 ex4 10 ex6 10 ex6 10 | grep "ERROR\|assigned"
+
+Salida:
+	[0] Partition [0: 0 -> 4] has been assigned to process [3 - SystemIdleProcess]
+	[0] Partition [2: 36 -> 64] has been assigned to process [0 - ex3]
+	[0] ERROR: A process could not be created from program [ex3] because an appropiate partition is not available
+	[0] ERROR: Program [ex4] is too big
+	[7] Partition [3: 100 -> 32] has been assigned to process [1 - ex5]
+	[14] ERROR: Program [ex4] is too big
+	[14] Partition [4: 132 -> 16] has been assigned to process [2 - ex6]
+	[14] Partition [1: 4 -> 32] has been assigned to process [0 - ex6]
+
+Consideraciones:
+	El color de los mensajes de ERROR no esta completamente en rojo debido a la implementación hecha en clase.
+
+:-)

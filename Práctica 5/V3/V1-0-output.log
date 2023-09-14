@@ -1,0 +1,29 @@
+30 messages loaded from file messagesTCH.txt
+2 messages loaded from file messagesSTD.txt
+0 Asserts Loaded
+User program list:
+	Program [[1;36mprogramVerySimple[0m] with arrival time [[1;36m0[0m]
+[0m	Program [[1;36mprogramVerySimple[0m] with arrival time [[1;36m0[0m]
+[0m[1;32mProcess [0] created from program [SystemIdleProcess][0m
+[0m[1;32mProcess [1] created from program [programVerySimple][0m
+[0m[1;32mProcess [2] created from program [programVerySimple][0m
+[0mNew Tick (1)
+{0D 000 000} IRET 0 0 (PC: [1;31m0[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0mNew Tick (2)
+{05 000 000} NOP 0 0 (PC: [1;31m1[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0mNew Tick (3)
+{04 005 000} TRAP 5 0 (PC: [1;31m2[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0mNew Tick (4)
+{0C 002 000} OS 2 0 (PC: [1;31m242[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0082[0m [[1;31m--------X-----Z-[0m])
+[0mNew Tick (5)
+[1;31mProcess [1 - programVerySimple] has the processor assigned[0m
+[0mNew Tick (6)
+{0D 000 000} IRET 0 0 (PC: [1;31m2[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0mNew Tick (7)
+{01 00A 80D} ADD 10 -13 (PC: [1;31m3[0m, Accumulator: [1;31m-3[0m, PSW: [1;31m0004[0m [[1;31m-------------N--[0m])
+[0mNew Tick (8)
+{08 00F 000} WRITE 15 0 (PC: [1;31m4[0m, Accumulator: [1;31m-3[0m, PSW: [1;31m0004[0m [[1;31m-------------N--[0m])
+[0mNew Tick (9)
+{0B 000 000} HALT 0 0 (PC: [1;31m4[0m, Accumulator: [1;31m-3[0m, PSW: [1;31m0005[0m [[1;31m-------------N-S[0m])
+[0m[1;31mEND of the simulation
+[0m[0m

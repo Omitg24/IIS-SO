@@ -1,0 +1,195 @@
+Omar Teixeira González, UO281847:
+
+Modificaciones:
+	En messagesSTD.txt:
+		150,@MERROR: excessive delay for program [%s] with arrival time [%d]@@\n
+
+	En OperatingSystem.h:
+		#define EXCESSIVEDELAY -6
+
+	En OperatingSystem.c:
+		#include "Clock.h"
+
+		int OperatingSystem_LongTermScheduler() {
+  
+			int PID, i,
+				numberOfSuccessfullyCreatedProcesses=0;
+
+			i =0;
+			//V3-EX3-BEGIN
+			while (OperatingSystem_IsThereANewProgram() == YES) {
+				i = Heap_poll(arrivalTimeQueue, QUEUE_ARRIVAL, &numberOfProgramsInArrivalTimeQueue);
+			//V3-EX3-END
+				PID=OperatingSystem_CreateProcess(i);
+				switch (PID) {
+					//V1-EX4b-BEGIN
+					case NOFREEENTRY:
+						//V2-EX1-BEGIN
+						OperatingSystem_ShowTime(ERROR);
+						//V2-EX1-END
+						ComputerSystem_DebugMessage(103, ERROR, programList[i]->executableName);
+						break;
+					//V1-EX4b-END
+					//V1-EX5a-BEGIN
+					case PROGRAMDOESNOTEXIST:
+						//V2-EX1-BEGIN
+						OperatingSystem_ShowTime(ERROR);
+						//V2-EX1-END
+						ComputerSystem_DebugMessage(104, ERROR, programList[i]->executableName, "it does not exist");
+						break;
+					case PROGRAMNOTVALID:
+						//V2-EX1-BEGIN
+						OperatingSystem_ShowTime(ERROR);
+						//V2-EX1-END
+						ComputerSystem_DebugMessage(104, ERROR, programList[i]->executableName, "invalid priority or size");	
+						break;
+					//V1-EX5a-END
+					//V1-EX6b-BEGIN
+					case TOOBIGPROCESS:
+						//V2-EX1-BEGIN
+						OperatingSystem_ShowTime(ERROR);
+						//V2-EX1-END
+						ComputerSystem_DebugMessage(105, ERROR, programList[i]->executableName);	
+						break;
+					//V1-EX6b-END
+					//V4-EX6d-BEGIN
+					case MEMORYFULL:
+						OperatingSystem_ShowTime(ERROR);
+						ComputerSystem_DebugMessage(144,ERROR,programList[i]->executableName);
+						break;
+					//V4-EX6d-END
+
+					//Examen-V4-EX1-BEGIN
+					case EXCESSIVEDELAY:
+						OperatingSystem_ShowTime(EXAM);
+						ComputerSystem_DebugMessage(150, EXAM, programList[i]->executableName, programList[i]->arrivalTime);
+						break;
+					//Examen-V4-EX1-END			
+				default:
+					numberOfSuccessfullyCreatedProcesses++;
+					if (programList[i]->type==USERPROGRAM) 
+						numberOfNotTerminatedUserProcesses++;		
+					// Move process to the ready state
+					OperatingSystem_MoveToTheREADYState(PID);			
+				}
+			}
+			//V2-EX7d-BEGIN
+			if (numberOfSuccessfullyCreatedProcesses>0){
+				OperatingSystem_PrintStatus();
+			}	
+			//V2-EX7d-END
+			// Return the number of succesfully created processes
+			return numberOfSuccessfullyCreatedProcesses;
+		}
+
+		int OperatingSystem_CreateProcess(int indexOfExecutableProgram) {
+  
+			int PID;
+			int processSize;
+			int numberOfPartition;
+			int priority;
+			//V1-EX7a-BEGIN
+			int instructions;
+			//V1-EX7a-END
+			//V4-EX6c-BEGIN
+			int initAddress;
+			//V4-EX6c-END
+			FILE *programFile;
+			PROGRAMS_DATA *executableProgram=programList[indexOfExecutableProgram];
+
+			// Obtain a process ID
+			PID=OperatingSystem_ObtainAnEntryInTheProcessTable();
+			//V1-EX4a-BEGIN
+			if (PID==NOFREEENTRY){
+				return NOFREEENTRY;
+			}
+			//V1-EX4a-END
+			// Check if programFile exists
+			programFile=fopen(executableProgram->executableName, "r");
+
+			//Examen-V4-EX1-BEGIN
+			if (Clock_GetTime()-executableProgram->arrivalTime>3){		
+				return EXCESSIVEDELAY;
+			}
+			//Examen-V4-EX1-END
+
+			//V1-EX5b-BEGIN
+			if (programFile == NULL){
+				return PROGRAMDOESNOTEXIST;
+			}
+			//V1-EX5b-END
+
+			// Obtain the memory requirements of the program
+			processSize=OperatingSystem_ObtainProgramSize(programFile);		
+			// Obtain the priority for the process
+			priority=OperatingSystem_ObtainPriority(programFile);	
+			//V1-EX5c-END
+			if (processSize == PROGRAMNOTVALID || priority == PROGRAMNOTVALID){
+				return PROGRAMNOTVALID;
+			}
+
+			//V4-EX6b-BEGIN
+			OperatingSystem_ShowTime(SYSMEM);
+			ComputerSystem_DebugMessage(142,SYSMEM,PID,executableProgram->executableName,processSize);
+			//V4-EX6b-END	
+
+			//V1-EX5c-END
+			// Obtain enough memory space
+			//V4-EX6c-BEGIN
+			numberOfPartition=OperatingSystem_ObtainMainMemory(processSize, PID);
+			
+			//V1-EX6a-BEGIN	
+			if (numberOfPartition==TOOBIGPROCESS || numberOfPartition==MEMORYFULL){
+				return numberOfPartition;
+			} 
+
+			initAddress = partitionsTable[numberOfPartition].initAddress;
+
+			//V1-EX7a-BEGIN
+			// Load program in the allocated memory
+			instructions=OperatingSystem_LoadProgram(programFile, initAddress, processSize);
+			if (instructions==TOOBIGPROCESS){
+				return TOOBIGPROCESS;
+			}
+			//V1-EX7a-END
+
+			//V4-EX7-BEGIN
+			OperatingSystem_ShowPartitionTable("before allocating memory");
+			//V4-EX7-END
+
+			partitionsTable[numberOfPartition].PID=PID;	
+			processTable[PID].numberOfPartition = numberOfPartition;
+			OperatingSystem_ShowTime(SYSMEM);
+			ComputerSystem_DebugMessage(143, SYSMEM, numberOfPartition, initAddress, partitionsTable[numberOfPartition].size,PID,executableProgram->executableName);
+			//V4-EX6c-END		
+			//V1-EX6a-END	
+
+			// PCB initialization	
+			OperatingSystem_PCBInitialization(PID, initAddress, processSize, priority, indexOfExecutableProgram);
+			
+			//V4-EX7-BEGIN
+			OperatingSystem_ShowPartitionTable("after allocating memory");
+			//V4-EX7-END
+
+			// Show message "Process [PID] created from program [executableName]\n"
+			//V2-EX1-BEGIN
+			OperatingSystem_ShowTime(INIT);
+			//V2-EX1-END
+			ComputerSystem_DebugMessage(70,INIT,PID,executableProgram->executableName);
+			
+			return PID;	
+		}
+		
+
+Probado con la salida:
+	./Simulator --debugSections=XD --memConfigFile=MemConfigEx1 iDontExist 0 ex1 0 iDontExist 1 ex2 2 ex1 3 ex1 5
+
+Salida: 
+	[0] ERROR: Program [iDontExist] is not valid [-- it does not exist --]
+	[7] ERROR: excessive delay for program [iDontExist] with arrival time [1]
+	[7] ERROR: excessive delay for program [ex2] with arrival time [2]
+	[7] ERROR: excessive delay for program [ex1] with arrival time [3]
+	[21] The system will shut down now...
+[23] END of the simulation
+
+:-)

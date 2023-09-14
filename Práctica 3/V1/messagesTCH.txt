@@ -1,0 +1,43 @@
+// Message system messages
+60,Illegal Message Number in line @R%d@@ of file @R%s@@\n
+61,Illegal Message Format in line @R%d@@ of file @R%s@@\n
+62,Missing vervose message file: @R%s@@\n
+63,%d messages loaded from file %s\n
+64,@RFATAL ERROR: Missing teacher message file: %s@@\n
+65,@RFATAL ERROR: Too much messages, increment NUMBEROFMSGS constant !!!@@\n
+66,@RDuplicated message [%d]!!!@@\n
+
+// Processor messages
+68,{%s}
+69, %s %d %d (PC: @R%d@@, Accumulator: @R%d@@, PSW: @R%x@@ [@R%s@@])\n
+
+// OperatingSystem messages
+70,@GProcess [%d] created from program [%s]@@\n
+71,@RProcess [%d - %s] has generated an exception and is terminating@@\n
+72,@RProcess [%d - %s] has the processor assigned@@\n
+73,@RProcess [%d - %s] has requested to terminate@@\n
+77,%d daemons programs loaded from file %s\n
+
+// Assert system messages
+81,Using asserts file: %s\nMaximum number of asserts: %d\n
+82,%d Asserts Loaded\n
+83,Warning maximun number of asserts reached !!!  (@R%d@@)\n
+84,Illegal Assert in line @R%d@@ of file @R%s@@\n
+85,Illegal time format in line @R%d@@ of file @R%s@@\n
+86,Illegal expected value format in line @R%d@@ of file @R%s (%s)\n
+87,Illegal address format in line @R%d@@ of file @R%s@@\n
+88,@RAssert failed. Time:@@ %d@R; Element:@@ %s;
+89,@R Expected:@@ %s@R; Real:@@ %s
+90,@R Expected:@@ %d@R; Real:@@ %d
+91,@R; Memory address:@@ %d
+92,@MWarning, @@%d@M unchecked asserts in Asserts queue !!!@@\n
+93,@MAssert warning. Unchecked assert @@(Time: %d, Element: %s)\n
+
+// Time
+97,New Tick (%d)\n
+
+// Formating and generic messages without parameters
+99,@R%s@@
+100,%s
+
+

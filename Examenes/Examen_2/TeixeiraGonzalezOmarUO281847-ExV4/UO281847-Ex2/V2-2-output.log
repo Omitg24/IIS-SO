@@ -1,0 +1,1000 @@
+34 messages loaded from file messagesTCH.txt
+15 messages loaded from file messagesSTD.txt
+0 Asserts Loaded
+[[1;31m0[0m] [0mUser program list:
+	Program [[1;36mprogramV2-2a[0m] with arrival time [[1;36m0[0m]
+[0m	Program [[1;36mprogramV2-2b[0m] with arrival time [[1;36m0[0m]
+[0m	Program [[1;36mprogramV2-2c[0m] with arrival time [[1;36m0[0m]
+[0m	[[1;31m0[0m] [0mNew process [[1;32m3 - SystemIdleProcess[0m] moving to the [[1;32mNEW[0m] state
+[0m	[[1;31m0[0m] [0m[1;32mProcess [3] created from program [SystemIdleProcess][0m
+[0m	[[1;31m0[0m] [0mProcess [[1;32m3 - SystemIdleProcess[0m] moving from the [[1;32mNEW[0m] state to the [[1;32mREADY[0m] state
+[0m	[[1;31m0[0m] [0mRunning Process Information:
+		[--- No running process ---]
+	[[1;31m0[0m] [0mReady-to-run processes queue:
+	USER:
+	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m0[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m0[0m] [0mPID association with program's name:
+		PID: [1;32m3[0m -> SystemIdleProcess
+[0m	[[1;31m0[0m] [0mNew process [[1;32m0 - programV2-2a[0m] moving to the [[1;32mNEW[0m] state
+[0m	[[1;31m0[0m] [0m[1;32mProcess [0] created from program [programV2-2a][0m
+[0m	[[1;31m0[0m] [0mProcess [[1;32m0 - programV2-2a[0m] moving from the [[1;32mNEW[0m] state to the [[1;32mREADY[0m] state
+[0m	[[1;31m0[0m] [0mRunning Process Information:
+		[--- No running process ---]
+	[[1;31m0[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m0[0m,5]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m0[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m0[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m	[[1;31m0[0m] [0mNew process [[1;32m1 - programV2-2b[0m] moving to the [[1;32mNEW[0m] state
+[0m	[[1;31m0[0m] [0m[1;32mProcess [1] created from program [programV2-2b][0m
+[0m	[[1;31m0[0m] [0mProcess [[1;32m1 - programV2-2b[0m] moving from the [[1;32mNEW[0m] state to the [[1;32mREADY[0m] state
+[0m	[[1;31m0[0m] [0mRunning Process Information:
+		[--- No running process ---]
+	[[1;31m0[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m0[0m,5], [0m[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m0[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m0[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m	[[1;31m0[0m] [0mNew process [[1;32m2 - programV2-2c[0m] moving to the [[1;32mNEW[0m] state
+[0m	[[1;31m0[0m] [0m[1;32mProcess [2] created from program [programV2-2c][0m
+[0m	[[1;31m0[0m] [0mProcess [[1;32m2 - programV2-2c[0m] moving from the [[1;32mNEW[0m] state to the [[1;32mREADY[0m] state
+[0m	[[1;31m0[0m] [0mRunning Process Information:
+		[--- No running process ---]
+	[[1;31m0[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m0[0m,5], [0m[[1;32m1[0m,999], [0m[[1;32m2[0m,5]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m0[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m0[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m	[[1;31m0[0m] [0mProcess [[1;32m0 - programV2-2a[0m] moving from the [[1;32mREADY[0m] state to the [[1;32mEXECUTING[0m] state
+[0m[[1;31m1[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m0[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0m[2] {05 000 000} NOP 0 0 (PC: [1;31m1[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0m[3] {01 005 000} ADD 5 0 (PC: [1;31m2[0m, Accumulator: [1;31m5[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[4] {04 007 000} TRAP 7 0 (PC: [1;31m3[0m, Accumulator: [1;31m5[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m5[0m] [0m{0C 002 000} OS 2 0 (PC: [1;31m242[0m, Accumulator: [1;31m5[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m6[0m] [0mProcess [[1;32m0 - programV2-2a[0m] moving from the [[1;32mEXECUTING[0m] state to the [[1;32mBLOCKED[0m] state
+[0m	[[1;31m6[0m] [0mProcess [[1;32m2 - programV2-2c[0m] moving from the [[1;32mREADY[0m] state to the [[1;32mEXECUTING[0m] state
+[0m	[[1;31m6[0m] [0mRunning Process Information:
+		[PID: [1;32m2[0m, Priority: 5, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m6[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m6[0m] [0mSLEEPING Queue:
+		[[1;32m0[0m, 5, [1;31m6[0m][0m
+	[[1;31m6[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m	[[1;31m6[0m] [0mRunning Process Information:
+		[PID: [1;32m2[0m, Priority: 5, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m6[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m6[0m] [0mSLEEPING Queue:
+		[[1;32m0[0m, 5, [1;31m6[0m][0m
+	[[1;31m6[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m7[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m0[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0m[[1;31m8[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m0[0m, PSW: [1;31m8082[0m [[1;31mM-------X-----Z-[0m])
+[0m	[[1;31m9[0m] [0m[1;36mClock interrupt number [1] has occurred[0m
+[0m	[[1;31m9[0m] [0mRunning Process Information:
+		[PID: [1;32m2[0m, Priority: 5, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m9[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m9[0m] [0mSLEEPING Queue:
+		[[1;32m0[0m, 5, [1;31m6[0m][0m
+	[[1;31m9[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m10[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m0[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0m[[1;31m11[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m0[0m, PSW: [1;31m8082[0m [[1;31mM-------X-----Z-[0m])
+[0m	[[1;31m12[0m] [0m[1;36mClock interrupt number [2] has occurred[0m
+[0m	[[1;31m12[0m] [0mRunning Process Information:
+		[PID: [1;32m2[0m, Priority: 5, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m12[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m12[0m] [0mSLEEPING Queue:
+		[[1;32m0[0m, 5, [1;31m6[0m][0m
+	[[1;31m12[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m13[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m0[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0m[14] {05 000 000} NOP 0 0 (PC: [1;31m1[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0m[15] {01 002 000} ADD 2 0 (PC: [1;31m2[0m, Accumulator: [1;31m2[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m16[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m17[0m] [0m[1;36mClock interrupt number [3] has occurred[0m
+[0m	[[1;31m17[0m] [0mRunning Process Information:
+		[PID: [1;32m2[0m, Priority: 5, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m17[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m17[0m] [0mSLEEPING Queue:
+		[[1;32m0[0m, 5, [1;31m6[0m][0m
+	[[1;31m17[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m18[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m2[0m, Accumulator: [1;31m2[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[19] {04 007 000} TRAP 7 0 (PC: [1;31m3[0m, Accumulator: [1;31m2[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m20[0m] [0m{0C 002 000} OS 2 0 (PC: [1;31m242[0m, Accumulator: [1;31m2[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m21[0m] [0mProcess [[1;32m2 - programV2-2c[0m] moving from the [[1;32mEXECUTING[0m] state to the [[1;32mBLOCKED[0m] state
+[0m	[[1;31m21[0m] [0mProcess [[1;32m1 - programV2-2b[0m] moving from the [[1;32mREADY[0m] state to the [[1;32mEXECUTING[0m] state
+[0m	[[1;31m21[0m] [0mRunning Process Information:
+		[PID: [1;32m1[0m, Priority: 999, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m21[0m] [0mReady-to-run processes queue:
+	USER:
+	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m21[0m] [0mSLEEPING Queue:
+		[[1;32m2[0m, 5, [1;31m6[0m][0m, [[1;32m0[0m, 5, [1;31m6[0m][0m
+	[[1;31m21[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m	[[1;31m21[0m] [0mRunning Process Information:
+		[PID: [1;32m1[0m, Priority: 999, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m21[0m] [0mReady-to-run processes queue:
+	USER:
+	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m21[0m] [0mSLEEPING Queue:
+		[[1;32m2[0m, 5, [1;31m6[0m][0m, [[1;32m0[0m, 5, [1;31m6[0m][0m
+	[[1;31m21[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m22[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m0[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0m[[1;31m23[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m0[0m, PSW: [1;31m8082[0m [[1;31mM-------X-----Z-[0m])
+[0m	[[1;31m24[0m] [0m[1;36mClock interrupt number [4] has occurred[0m
+[0m	[[1;31m24[0m] [0mRunning Process Information:
+		[PID: [1;32m1[0m, Priority: 999, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m24[0m] [0mReady-to-run processes queue:
+	USER:
+	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m24[0m] [0mSLEEPING Queue:
+		[[1;32m2[0m, 5, [1;31m6[0m][0m, [[1;32m0[0m, 5, [1;31m6[0m][0m
+	[[1;31m24[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m25[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m0[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0m[[1;31m26[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m0[0m, PSW: [1;31m8082[0m [[1;31mM-------X-----Z-[0m])
+[0m	[[1;31m27[0m] [0m[1;36mClock interrupt number [5] has occurred[0m
+[0m	[[1;31m27[0m] [0mRunning Process Information:
+		[PID: [1;32m1[0m, Priority: 999, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m27[0m] [0mReady-to-run processes queue:
+	USER:
+	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m27[0m] [0mSLEEPING Queue:
+		[[1;32m2[0m, 5, [1;31m6[0m][0m, [[1;32m0[0m, 5, [1;31m6[0m][0m
+	[[1;31m27[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m28[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m0[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0m[29] {01 002 000} ADD 2 0 (PC: [1;31m1[0m, Accumulator: [1;31m2[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[30] {0A 801 000} INC -1 0 (PC: [1;31m2[0m, Accumulator: [1;31m1[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m31[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m1[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m32[0m] [0m[1;36mClock interrupt number [6] has occurred[0m
+[0m	[[1;31m32[0m] [0mProcess [[1;32m2 - programV2-2c[0m] moving from the [[1;32mBLOCKED[0m] state to the [[1;32mREADY[0m] state
+[0m	[[1;31m32[0m] [0mProcess [[1;32m0 - programV2-2a[0m] moving from the [[1;32mBLOCKED[0m] state to the [[1;32mREADY[0m] state
+[0m	[[1;31m32[0m] [0mRunning Process Information:
+		[PID: [1;32m1[0m, Priority: 999, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m32[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m2[0m,5], [0m[[1;32m0[0m,5]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m32[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m32[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m	[[1;31m32[0m] [0mProcess [[1;32m1 - programV2-2b[0m] will be thrown out of the processor by process [[1;32m2 - programV2-2c[0m]
+[0m	[[1;31m32[0m] [0mProcess [[1;32m1 - programV2-2b[0m] moving from the [[1;32mEXECUTING[0m] state to the [[1;32mREADY[0m] state
+[0m	[[1;31m32[0m] [0mProcess [[1;32m2 - programV2-2c[0m] moving from the [[1;32mREADY[0m] state to the [[1;32mEXECUTING[0m] state
+[0m	[[1;31m32[0m] [0mRunning Process Information:
+		[PID: [1;32m2[0m, Priority: 5, WakeUp: [1;31m6[0m, Queue: USER]
+[0m	[[1;31m32[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m0[0m,5], [0m[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m32[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m32[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m	[[1;31m32[0m] [0mRunning Process Information:
+		[PID: [1;32m2[0m, Priority: 5, WakeUp: [1;31m6[0m, Queue: USER]
+[0m	[[1;31m32[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m0[0m,5], [0m[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m32[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m32[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m33[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m3[0m, Accumulator: [1;31m2[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[34] {04 004 000} TRAP 4 0 (PC: [1;31m4[0m, Accumulator: [1;31m2[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m35[0m] [0m{0C 002 000} OS 2 0 (PC: [1;31m242[0m, Accumulator: [1;31m2[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m36[0m] [0mProcess [[1;32m2 - programV2-2c[0m] will transfer the control of the processor to process [[1;32m0 - programV2-2a[0m]
+[0m	[[1;31m36[0m] [0mProcess [[1;32m2 - programV2-2c[0m] moving from the [[1;32mEXECUTING[0m] state to the [[1;32mREADY[0m] state
+[0m	[[1;31m36[0m] [0mProcess [[1;32m0 - programV2-2a[0m] moving from the [[1;32mREADY[0m] state to the [[1;32mEXECUTING[0m] state
+[0m	[[1;31m36[0m] [0mRunning Process Information:
+		[PID: [1;32m0[0m, Priority: 5, WakeUp: [1;31m6[0m, Queue: USER]
+[0m	[[1;31m36[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m2[0m,5], [0m[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m36[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m36[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m	[[1;31m36[0m] [0mRunning Process Information:
+		[PID: [1;32m0[0m, Priority: 5, WakeUp: [1;31m6[0m, Queue: USER]
+[0m	[[1;31m36[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m2[0m,5], [0m[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m36[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m36[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m37[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m3[0m, Accumulator: [1;31m5[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m38[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m5[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m39[0m] [0m[1;36mClock interrupt number [7] has occurred[0m
+[0m	[[1;31m39[0m] [0mRunning Process Information:
+		[PID: [1;32m0[0m, Priority: 5, WakeUp: [1;31m6[0m, Queue: USER]
+[0m	[[1;31m39[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m2[0m,5], [0m[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m39[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m39[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m40[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m3[0m, Accumulator: [1;31m5[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m41[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m5[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m42[0m] [0m[1;36mClock interrupt number [8] has occurred[0m
+[0m	[[1;31m42[0m] [0mRunning Process Information:
+		[PID: [1;32m0[0m, Priority: 5, WakeUp: [1;31m6[0m, Queue: USER]
+[0m	[[1;31m42[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m2[0m,5], [0m[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m42[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m42[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m43[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m3[0m, Accumulator: [1;31m5[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[44] {04 004 000} TRAP 4 0 (PC: [1;31m4[0m, Accumulator: [1;31m5[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m45[0m] [0m{0C 002 000} OS 2 0 (PC: [1;31m242[0m, Accumulator: [1;31m5[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m46[0m] [0mProcess [[1;32m0 - programV2-2a[0m] will transfer the control of the processor to process [[1;32m2 - programV2-2c[0m]
+[0m	[[1;31m46[0m] [0mProcess [[1;32m0 - programV2-2a[0m] moving from the [[1;32mEXECUTING[0m] state to the [[1;32mREADY[0m] state
+[0m	[[1;31m46[0m] [0mProcess [[1;32m2 - programV2-2c[0m] moving from the [[1;32mREADY[0m] state to the [[1;32mEXECUTING[0m] state
+[0m	[[1;31m46[0m] [0mRunning Process Information:
+		[PID: [1;32m2[0m, Priority: 5, WakeUp: [1;31m6[0m, Queue: USER]
+[0m	[[1;31m46[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m0[0m,5], [0m[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m46[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m46[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m	[[1;31m46[0m] [0mRunning Process Information:
+		[PID: [1;32m2[0m, Priority: 5, WakeUp: [1;31m6[0m, Queue: USER]
+[0m	[[1;31m46[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m0[0m,5], [0m[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m46[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m46[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m47[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m4[0m, Accumulator: [1;31m2[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m48[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m49[0m] [0m[1;36mClock interrupt number [9] has occurred[0m
+[0m	[[1;31m49[0m] [0mRunning Process Information:
+		[PID: [1;32m2[0m, Priority: 5, WakeUp: [1;31m6[0m, Queue: USER]
+[0m	[[1;31m49[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m0[0m,5], [0m[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m49[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m49[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m50[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m4[0m, Accumulator: [1;31m2[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m51[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m52[0m] [0m[1;36mClock interrupt number [10] has occurred[0m
+[0m	[[1;31m52[0m] [0mRunning Process Information:
+		[PID: [1;32m2[0m, Priority: 5, WakeUp: [1;31m6[0m, Queue: USER]
+[0m	[[1;31m52[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m0[0m,5], [0m[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m52[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m52[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m53[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m4[0m, Accumulator: [1;31m2[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[54] {0D 000 000} IRET 0 0 (PC: [1;31m4[0m, Accumulator: [1;31m2[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m55[0m] [0m{0C 006 000} OS 6 0 (PC: [1;31m244[0m, Accumulator: [1;31m2[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m56[0m] [0m[1;31mProcess [2 - programV2-2c] has generated an exception and is terminating[0m
+[0m	[[1;31m56[0m] [0mProcess [[1;32m2 - programV2-2c[0m] moving from the [[1;32mEXECUTING[0m] state to the [[1;32mEXIT[0m] state
+[0m	[[1;31m56[0m] [0mProcess [[1;32m0 - programV2-2a[0m] moving from the [[1;32mREADY[0m] state to the [[1;32mEXECUTING[0m] state
+[0m	[[1;31m56[0m] [0mRunning Process Information:
+		[PID: [1;32m0[0m, Priority: 5, WakeUp: [1;31m6[0m, Queue: USER]
+[0m	[[1;31m56[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m56[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m56[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m57[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m4[0m, Accumulator: [1;31m5[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m58[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m5[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m59[0m] [0m[1;36mClock interrupt number [11] has occurred[0m
+[0m	[[1;31m59[0m] [0mRunning Process Information:
+		[PID: [1;32m0[0m, Priority: 5, WakeUp: [1;31m6[0m, Queue: USER]
+[0m	[[1;31m59[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m59[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m59[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m60[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m4[0m, Accumulator: [1;31m5[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m61[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m5[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m62[0m] [0m[1;36mClock interrupt number [12] has occurred[0m
+[0m	[[1;31m62[0m] [0mRunning Process Information:
+		[PID: [1;32m0[0m, Priority: 5, WakeUp: [1;31m6[0m, Queue: USER]
+[0m	[[1;31m62[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m62[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m62[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m63[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m4[0m, Accumulator: [1;31m5[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[64] {04 003 000} TRAP 3 0 (PC: [1;31m5[0m, Accumulator: [1;31m5[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m65[0m] [0m{0C 002 000} OS 2 0 (PC: [1;31m242[0m, Accumulator: [1;31m5[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m66[0m] [0m[1;31mProcess [0 - programV2-2a] has requested to terminate[0m
+[0m	[[1;31m66[0m] [0mProcess [[1;32m0 - programV2-2a[0m] moving from the [[1;32mEXECUTING[0m] state to the [[1;32mEXIT[0m] state
+[0m	[[1;31m66[0m] [0mProcess [[1;32m1 - programV2-2b[0m] moving from the [[1;32mREADY[0m] state to the [[1;32mEXECUTING[0m] state
+[0m	[[1;31m66[0m] [0mRunning Process Information:
+		[PID: [1;32m1[0m, Priority: 999, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m66[0m] [0mReady-to-run processes queue:
+	USER:
+	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m66[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m66[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m	[[1;31m66[0m] [0mRunning Process Information:
+		[PID: [1;32m1[0m, Priority: 999, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m66[0m] [0mReady-to-run processes queue:
+	USER:
+	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m66[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m66[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m67[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m2[0m, Accumulator: [1;31m1[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m68[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m1[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m69[0m] [0m[1;36mClock interrupt number [13] has occurred[0m
+[0m	[[1;31m69[0m] [0mRunning Process Information:
+		[PID: [1;32m1[0m, Priority: 999, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m69[0m] [0mReady-to-run processes queue:
+	USER:
+	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m69[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m69[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m70[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m2[0m, Accumulator: [1;31m1[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m71[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m1[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m72[0m] [0m[1;36mClock interrupt number [14] has occurred[0m
+[0m	[[1;31m72[0m] [0mRunning Process Information:
+		[PID: [1;32m1[0m, Priority: 999, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m72[0m] [0mReady-to-run processes queue:
+	USER:
+	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m72[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m72[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m73[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m2[0m, Accumulator: [1;31m1[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[74] {07 002 000} ZJUMP 2 0 (PC: [1;31m3[0m, Accumulator: [1;31m1[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[75] {06 802 000} JUMP -2 0 (PC: [1;31m1[0m, Accumulator: [1;31m1[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m76[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m1[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m77[0m] [0m[1;36mClock interrupt number [15] has occurred[0m
+[0m	[[1;31m77[0m] [0mRunning Process Information:
+		[PID: [1;32m1[0m, Priority: 999, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m77[0m] [0mReady-to-run processes queue:
+	USER:
+	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m77[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m77[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m78[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m1[0m, Accumulator: [1;31m1[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[79] {0A 801 000} INC -1 0 (PC: [1;31m2[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0m[80] {07 002 000} ZJUMP 2 0 (PC: [1;31m4[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0m[[1;31m81[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m0[0m, PSW: [1;31m8082[0m [[1;31mM-------X-----Z-[0m])
+[0m	[[1;31m82[0m] [0m[1;36mClock interrupt number [16] has occurred[0m
+[0m	[[1;31m82[0m] [0mRunning Process Information:
+		[PID: [1;32m1[0m, Priority: 999, WakeUp: [1;31m0[0m, Queue: USER]
+[0m	[[1;31m82[0m] [0mReady-to-run processes queue:
+	USER:
+	DAEMONS:[[1;32m3[0m,100]
+[0m	[[1;31m82[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m82[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m83[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m4[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0m[84] {0A 001 000} INC 1 0 (PC: [1;31m5[0m, Accumulator: [1;31m1[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[85] {04 007 000} TRAP 7 0 (PC: [1;31m6[0m, Accumulator: [1;31m1[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0m[[1;31m86[0m] [0m{0C 002 000} OS 2 0 (PC: [1;31m242[0m, Accumulator: [1;31m1[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m87[0m] [0mProcess [[1;32m1 - programV2-2b[0m] moving from the [[1;32mEXECUTING[0m] state to the [[1;32mBLOCKED[0m] state
+[0m	[[1;31m87[0m] [0mProcess [[1;32m3 - SystemIdleProcess[0m] moving from the [[1;32mREADY[0m] state to the [[1;32mEXECUTING[0m] state
+[0m	[[1;31m87[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m87[0m] [0mReady-to-run processes queue:
+	USER:
+	DAEMONS:	[[1;31m87[0m] [0mSLEEPING Queue:
+		[[1;32m1[0m, 999, [1;31m18[0m][0m
+	[[1;31m87[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m	[[1;31m87[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m87[0m] [0mReady-to-run processes queue:
+	USER:
+	DAEMONS:	[[1;31m87[0m] [0mSLEEPING Queue:
+		[[1;32m1[0m, 999, [1;31m18[0m][0m
+	[[1;31m87[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m88[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m180[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0082[0m [[1;31m--------X-----Z-[0m])
+[0m[[1;31m89[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m0[0m, PSW: [1;31m8082[0m [[1;31mM-------X-----Z-[0m])
+[0m	[[1;31m90[0m] [0m[1;36mClock interrupt number [17] has occurred[0m
+[0m	[[1;31m90[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m90[0m] [0mReady-to-run processes queue:
+	USER:
+	DAEMONS:	[[1;31m90[0m] [0mSLEEPING Queue:
+		[[1;32m1[0m, 999, [1;31m18[0m][0m
+	[[1;31m90[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m91[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m180[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0082[0m [[1;31m--------X-----Z-[0m])
+[0m[[1;31m92[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m0[0m, PSW: [1;31m8082[0m [[1;31mM-------X-----Z-[0m])
+[0m	[[1;31m93[0m] [0m[1;36mClock interrupt number [18] has occurred[0m
+[0m	[[1;31m93[0m] [0mProcess [[1;32m1 - programV2-2b[0m] moving from the [[1;32mBLOCKED[0m] state to the [[1;32mREADY[0m] state
+[0m	[[1;31m93[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m93[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m93[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m93[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m	[[1;31m93[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m93[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m93[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m93[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m94[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m180[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0082[0m [[1;31m--------X-----Z-[0m])
+[0m[[1;31m95[0m] [0m{01 57C 2CE} ADD 1404 718 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m96[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m97[0m] [0m[1;36mClock interrupt number [19] has occurred[0m
+[0m	[[1;31m97[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m97[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m97[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m97[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m98[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m99[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m100[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m101[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m102[0m] [0m[1;36mClock interrupt number [20] has occurred[0m
+[0m	[[1;31m102[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m102[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m102[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m102[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m103[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m104[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m105[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m106[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m107[0m] [0m[1;36mClock interrupt number [21] has occurred[0m
+[0m	[[1;31m107[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m107[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m107[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m107[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m108[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m109[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m110[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m111[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m112[0m] [0m[1;36mClock interrupt number [22] has occurred[0m
+[0m	[[1;31m112[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m112[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m112[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m112[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m113[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m114[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m115[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m116[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m117[0m] [0m[1;36mClock interrupt number [23] has occurred[0m
+[0m	[[1;31m117[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m117[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m117[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m117[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m118[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m119[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m120[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m121[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m122[0m] [0m[1;36mClock interrupt number [24] has occurred[0m
+[0m	[[1;31m122[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m122[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m122[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m122[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m123[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m124[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m125[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m126[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m127[0m] [0m[1;36mClock interrupt number [25] has occurred[0m
+[0m	[[1;31m127[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m127[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m127[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m127[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m128[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m129[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m130[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m131[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m132[0m] [0m[1;36mClock interrupt number [26] has occurred[0m
+[0m	[[1;31m132[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m132[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m132[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m132[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m133[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m134[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m135[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m136[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m137[0m] [0m[1;36mClock interrupt number [27] has occurred[0m
+[0m	[[1;31m137[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m137[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m137[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m137[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m138[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m139[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m140[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m141[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m142[0m] [0m[1;36mClock interrupt number [28] has occurred[0m
+[0m	[[1;31m142[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m142[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m142[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m142[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m143[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m144[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m145[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m146[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m147[0m] [0m[1;36mClock interrupt number [29] has occurred[0m
+[0m	[[1;31m147[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m147[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m147[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m147[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m148[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m149[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m150[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m151[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m152[0m] [0m[1;36mClock interrupt number [30] has occurred[0m
+[0m	[[1;31m152[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m152[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m152[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m152[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m153[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m154[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m155[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m156[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m157[0m] [0m[1;36mClock interrupt number [31] has occurred[0m
+[0m	[[1;31m157[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m157[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m157[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m157[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m158[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m159[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m160[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m161[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m162[0m] [0m[1;36mClock interrupt number [32] has occurred[0m
+[0m	[[1;31m162[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m162[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m162[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m162[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m163[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m164[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m165[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m166[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m167[0m] [0m[1;36mClock interrupt number [33] has occurred[0m
+[0m	[[1;31m167[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m167[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m167[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m167[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m168[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m169[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m170[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m171[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m172[0m] [0m[1;36mClock interrupt number [34] has occurred[0m
+[0m	[[1;31m172[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m172[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m172[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m172[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m173[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m174[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m175[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m176[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m177[0m] [0m[1;36mClock interrupt number [35] has occurred[0m
+[0m	[[1;31m177[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m177[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m177[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m177[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m178[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m179[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m180[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m181[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m182[0m] [0m[1;36mClock interrupt number [36] has occurred[0m
+[0m	[[1;31m182[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m182[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m182[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m182[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m183[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m184[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m185[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m186[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m187[0m] [0m[1;36mClock interrupt number [37] has occurred[0m
+[0m	[[1;31m187[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m187[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m187[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m187[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m188[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m189[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m190[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m191[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m192[0m] [0m[1;36mClock interrupt number [38] has occurred[0m
+[0m	[[1;31m192[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m192[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m192[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m192[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m193[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m194[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m195[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m196[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m197[0m] [0m[1;36mClock interrupt number [39] has occurred[0m
+[0m	[[1;31m197[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m197[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m197[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m197[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m198[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m199[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m200[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m201[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m202[0m] [0m[1;36mClock interrupt number [40] has occurred[0m
+[0m	[[1;31m202[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m202[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m202[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m202[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m203[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m204[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m205[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m206[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m207[0m] [0m[1;36mClock interrupt number [41] has occurred[0m
+[0m	[[1;31m207[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m207[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m207[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m207[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m208[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m209[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m210[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m211[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m212[0m] [0m[1;36mClock interrupt number [42] has occurred[0m
+[0m	[[1;31m212[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m212[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m212[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m212[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m213[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m214[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m215[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m216[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m217[0m] [0m[1;36mClock interrupt number [43] has occurred[0m
+[0m	[[1;31m217[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m217[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m217[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m217[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m218[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m219[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m220[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m221[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m222[0m] [0m[1;36mClock interrupt number [44] has occurred[0m
+[0m	[[1;31m222[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m222[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m222[0m] [0mSLEEPING Queue:
+		[--- empty queue ---]
+	[[1;31m222[0m] [0mPID association with program's name:
+		PID: [1;32m0[0m -> programV2-2a
+[0m		PID: [1;32m1[0m -> programV2-2b
+[0m		PID: [1;32m2[0m -> programV2-2c
+[0m		PID: [1;32m3[0m -> SystemIdleProcess
+[0m[[1;31m223[0m] [0m{0D 000 000} IRET 0 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m224[0m] [0m{05 000 000} NOP 0 0 (PC: [1;31m182[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m225[0m] [0m{06 801 000} JUMP -1 0 (PC: [1;31m181[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0m[[1;31m226[0m] [0m{0C 009 000} OS 9 0 (PC: [1;31m246[0m, Accumulator: [1;31m2122[0m, PSW: [1;31m8080[0m [[1;31mM-------X-------[0m])
+[0m	[[1;31m227[0m] [0m[1;36mClock interrupt number [45] has occurred[0m
+[0m	[[1;31m227[0m] [0mRunning Process Information:
+		[PID: [1;32m3[0m, Priority: 100, WakeUp: [1;31m0[0m, Queue: DAEMONS]
+[0m	[[1;31m227[0m] [0mReady-to-run processes queue:
+	USER:[[1;32m1[0m,999]
+[0m	DAEMONS:	[[1;31m227[0m] [0mSLEEPING Queue:

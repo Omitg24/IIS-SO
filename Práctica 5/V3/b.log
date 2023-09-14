@@ -1,0 +1,373 @@
+36 messages loaded from file messagesTCH.txt
+16 messages loaded from file messagesSTD.txt
+0 Asserts Loaded
+[0] User program list:
+        Program [programV2-2a] with arrival time [2]
+        Program [programV2-2b] with arrival time [0]
+        Program [programV2-2c] with arrival time [3]
+        [0] Running Process Information:
+                [--- No running process ---]
+        [0] Ready-to-run processes queue:
+        USER:
+        DAEMONS:
+        [0] SLEEPING Queue:
+                [--- empty queue ---]
+        [0] PID association with program's name:
+        [0] Arrival Time Queue:
+                [SystemIdleProcess, 0, DAEMONS]
+                [programV2-2a, 2, USER]
+                [programV2-2b, 0, USER]
+                [programV2-2c, 3, USER]
+        [0] New process [3 - SystemIdleProcess] moving to the [NEW] state
+        [0] Process [3] created from program [SystemIdleProcess]
+        [0] Process [3 - SystemIdleProcess] moving from the [NEW] state to the [READY] state
+        [0] New process [0 - programV2-2b] moving to the [NEW] state
+        [0] Process [0] created from program [programV2-2b]
+        [0] Process [0 - programV2-2b] moving from the [NEW] state to the [READY] state
+        [0] Running Process Information:
+                [--- No running process ---]
+        [0] Ready-to-run processes queue:
+        USER:[0,999]
+        DAEMONS:[3,100]
+        [0] SLEEPING Queue:
+                [--- empty queue ---]
+        [0] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 3 -> SystemIdleProcess
+        [0] Arrival Time Queue:
+                [programV2-2a, 2, USER]
+                [programV2-2c, 3, USER]
+        [0] Process [0 - programV2-2b] moving from the [READY] state to the [EXECUTING] state
+[1] {0D 000 000} IRET 0 0 (PID: 0, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[2] {01 002 000} ADD 2 0 (PID: 0, PC: 1, Accumulator: 2, PSW: 0000 [----------------])
+[3] {0A 801 000} INC -1 0 (PID: 0, PC: 2, Accumulator: 1, PSW: 0000 [----------------])
+[4] {07 002 000} ZJUMP 2 0 (PID: 0, PC: 3, Accumulator: 1, PSW: 0000 [----------------])
+[5] {06 802 000} JUMP -2 0 (PID: 0, PC: 1, Accumulator: 1, PSW: 0000 [----------------])
+[6] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 1, PSW: 8080 [M-------X-------])
+        [7] Clock interrupt number [1] has occurred
+[8] {0D 000 000} IRET 0 0 (PID: 0, PC: 1, Accumulator: 1, PSW: 0000 [----------------])
+[9] {0A 801 000} INC -1 0 (PID: 0, PC: 2, Accumulator: 0, PSW: 0002 [--------------Z-])
+[10] {07 002 000} ZJUMP 2 0 (PID: 0, PC: 4, Accumulator: 0, PSW: 0002 [--------------Z-])
+[11] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+        [12] Clock interrupt number [2] has occurred
+[13] {0D 000 000} IRET 0 0 (PID: 0, PC: 4, Accumulator: 0, PSW: 0002 [--------------Z-])
+[14] {0A 001 000} INC 1 0 (PID: 0, PC: 5, Accumulator: 1, PSW: 0000 [----------------])
+[15] {04 007 000} TRAP 7 0 (PID: 0, PC: 6, Accumulator: 1, PSW: 0000 [----------------])
+[16] {0C 002 000} OS 2 0 (PC: 242, Accumulator: 1, PSW: 8080 [M-------X-------])
+        [17] Process [0 - programV2-2b] moving from the [EXECUTING] state to the [BLOCKED] state
+        [17] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+        [17] Running Process Information:
+                [PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+        [17] Ready-to-run processes queue:
+        USER:
+        DAEMONS:
+        [17] SLEEPING Queue:
+                [0, 999, 4]
+        [17] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 3 -> SystemIdleProcess
+        [17] Arrival Time Queue:
+                [programV2-2a, 2, USER]
+                [programV2-2c, 3, USER]
+[18] {0D 000 000} IRET 0 0 (PID: 3, PC: 180, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[19] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+        [20] Clock interrupt number [3] has occurred
+[21] {0D 000 000} IRET 0 0 (PID: 3, PC: 180, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[22] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+        [23] Clock interrupt number [4] has occurred
+        [23] Process [0 - programV2-2b] moving from the [BLOCKED] state to the [READY] state
+        [23] New process [1 - programV2-2a] moving to the [NEW] state
+        [23] Process [1] created from program [programV2-2a]
+        [23] Process [1 - programV2-2a] moving from the [NEW] state to the [READY] state
+        [23] New process [2 - programV2-2c] moving to the [NEW] state
+        [23] Process [2] created from program [programV2-2c]
+        [23] Process [2 - programV2-2c] moving from the [NEW] state to the [READY] state
+        [23] Running Process Information:
+                [PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+        [23] Ready-to-run processes queue:
+        USER:[1,5], [0,999], [2,5]
+        DAEMONS:
+        [23] SLEEPING Queue:
+                [--- empty queue ---]
+        [23] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 1 -> programV2-2a
+                PID: 2 -> programV2-2c
+                PID: 3 -> SystemIdleProcess
+        [23] Running Process Information:
+                [PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+        [23] Ready-to-run processes queue:
+        USER:[1,5], [0,999], [2,5]
+        DAEMONS:
+        [23] SLEEPING Queue:
+                [--- empty queue ---]
+        [23] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 1 -> programV2-2a
+                PID: 2 -> programV2-2c
+                PID: 3 -> SystemIdleProcess
+        [23] Process [3 - SystemIdleProcess] will be thrown out of the processor by process [1 - programV2-2a]
+        [23] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [READY] state
+        [23] Process [1 - programV2-2a] moving from the [READY] state to the [EXECUTING] state
+        [23] Running Process Information:
+                [PID: 1, Priority: 5, WakeUp: 0, Queue: USER]
+        [23] Ready-to-run processes queue:
+        USER:[2,5], [0,999]
+        DAEMONS:[3,100]
+        [23] SLEEPING Queue:
+                [--- empty queue ---]
+        [23] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 1 -> programV2-2a
+                PID: 2 -> programV2-2c
+                PID: 3 -> SystemIdleProcess
+[24] {0D 000 000} IRET 0 0 (PID: 1, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[25] {05 000 000} NOP 0 0 (PID: 1, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[26] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+        [27] Clock interrupt number [5] has occurred
+[28] {0D 000 000} IRET 0 0 (PID: 1, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[29] {01 005 000} ADD 5 0 (PID: 1, PC: 2, Accumulator: 5, PSW: 0000 [----------------])
+[30] {04 007 000} TRAP 7 0 (PID: 1, PC: 3, Accumulator: 5, PSW: 0000 [----------------])
+[31] {0C 002 000} OS 2 0 (PC: 242, Accumulator: 5, PSW: 8080 [M-------X-------])
+        [32] Process [1 - programV2-2a] moving from the [EXECUTING] state to the [BLOCKED] state
+        [32] Process [2 - programV2-2c] moving from the [READY] state to the [EXECUTING] state
+        [32] Running Process Information:
+                [PID: 2, Priority: 5, WakeUp: 0, Queue: USER]
+        [32] Ready-to-run processes queue:
+        USER:[0,999]
+        DAEMONS:[3,100]
+        [32] SLEEPING Queue:
+                [1, 5, 11]
+        [32] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 1 -> programV2-2a
+                PID: 2 -> programV2-2c
+                PID: 3 -> SystemIdleProcess
+[33] {0D 000 000} IRET 0 0 (PID: 2, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[34] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+        [35] Clock interrupt number [6] has occurred
+[36] {0D 000 000} IRET 0 0 (PID: 2, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[37] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+        [38] Clock interrupt number [7] has occurred
+[39] {0D 000 000} IRET 0 0 (PID: 2, PC: 0, Accumulator: 0, PSW: 0002 [--------------Z-])
+[40] {05 000 000} NOP 0 0 (PID: 2, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[41] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+        [42] Clock interrupt number [8] has occurred
+[43] {0D 000 000} IRET 0 0 (PID: 2, PC: 1, Accumulator: 0, PSW: 0002 [--------------Z-])
+[44] {01 002 000} ADD 2 0 (PID: 2, PC: 2, Accumulator: 2, PSW: 0000 [----------------])
+[45] {04 007 000} TRAP 7 0 (PID: 2, PC: 3, Accumulator: 2, PSW: 0000 [----------------])
+[46] {0C 002 000} OS 2 0 (PC: 242, Accumulator: 2, PSW: 8080 [M-------X-------])
+        [47] Process [2 - programV2-2c] moving from the [EXECUTING] state to the [BLOCKED] state
+        [47] Process [0 - programV2-2b] moving from the [READY] state to the [EXECUTING] state
+        [47] Running Process Information:
+                [PID: 0, Priority: 999, WakeUp: 4, Queue: USER]
+        [47] Ready-to-run processes queue:
+        USER:
+        DAEMONS:[3,100]
+        [47] SLEEPING Queue:
+                [1, 5, 11], [2, 5, 11]
+        [47] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 1 -> programV2-2a
+                PID: 2 -> programV2-2c
+                PID: 3 -> SystemIdleProcess
+[48] {0D 000 000} IRET 0 0 (PID: 0, PC: 6, Accumulator: 1, PSW: 0000 [----------------])
+[49] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 1, PSW: 8080 [M-------X-------])
+        [50] Clock interrupt number [9] has occurred
+[51] {0D 000 000} IRET 0 0 (PID: 0, PC: 6, Accumulator: 1, PSW: 0000 [----------------])
+[52] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 1, PSW: 8080 [M-------X-------])
+        [53] Clock interrupt number [10] has occurred
+[54] {0D 000 000} IRET 0 0 (PID: 0, PC: 6, Accumulator: 1, PSW: 0000 [----------------])
+[55] {0B 000 000} HALT 0 0 (PID: 0, PC: 6, Accumulator: 1, PSW: 0000 [----------------])
+[56] {0C 006 000} OS 6 0 (PC: 244, Accumulator: 1, PSW: 8080 [M-------X-------])
+        [57] Process [0 - programV2-2b] has generated an exception and is terminating
+        [57] Process [0 - programV2-2b] moving from the [EXECUTING] state to the [EXIT] state
+        [57] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+        [57] Running Process Information:
+                [PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+        [57] Ready-to-run processes queue:
+        USER:
+        DAEMONS:
+        [57] SLEEPING Queue:
+                [1, 5, 11], [2, 5, 11]
+        [57] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 1 -> programV2-2a
+                PID: 2 -> programV2-2c
+                PID: 3 -> SystemIdleProcess
+[58] {0D 000 000} IRET 0 0 (PID: 3, PC: 180, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[59] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+        [60] Clock interrupt number [11] has occurred
+        [60] Process [1 - programV2-2a] moving from the [BLOCKED] state to the [READY] state
+        [60] Running Process Information:
+                [PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+        [60] Ready-to-run processes queue:
+        USER:[1,5]
+        DAEMONS:
+        [60] SLEEPING Queue:
+                [2, 5, 11]
+        [60] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 1 -> programV2-2a
+                PID: 2 -> programV2-2c
+                PID: 3 -> SystemIdleProcess
+        [60] Process [2 - programV2-2c] moving from the [BLOCKED] state to the [READY] state
+        [60] Running Process Information:
+                [PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+        [60] Ready-to-run processes queue:
+        USER:[1,5], [2,5]
+        DAEMONS:
+        [60] SLEEPING Queue:
+                [--- empty queue ---]
+        [60] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 1 -> programV2-2a
+                PID: 2 -> programV2-2c
+                PID: 3 -> SystemIdleProcess
+        [60] Running Process Information:
+                [PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+        [60] Ready-to-run processes queue:
+        USER:[1,5], [2,5]
+        DAEMONS:
+        [60] SLEEPING Queue:
+                [--- empty queue ---]
+        [60] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 1 -> programV2-2a
+                PID: 2 -> programV2-2c
+                PID: 3 -> SystemIdleProcess
+        [60] Process [3 - SystemIdleProcess] will be thrown out of the processor by process [1 - programV2-2a]
+        [60] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [READY] state
+        [60] Process [1 - programV2-2a] moving from the [READY] state to the [EXECUTING] state
+        [60] Running Process Information:
+                [PID: 1, Priority: 5, WakeUp: 11, Queue: USER]
+        [60] Ready-to-run processes queue:
+        USER:[2,5]
+        DAEMONS:[3,100]
+        [60] SLEEPING Queue:
+                [--- empty queue ---]
+        [60] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 1 -> programV2-2a
+                PID: 2 -> programV2-2c
+                PID: 3 -> SystemIdleProcess
+[61] {0D 000 000} IRET 0 0 (PID: 1, PC: 3, Accumulator: 5, PSW: 0000 [----------------])
+[62] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 5, PSW: 8080 [M-------X-------])
+        [63] Clock interrupt number [12] has occurred
+[64] {0D 000 000} IRET 0 0 (PID: 1, PC: 3, Accumulator: 5, PSW: 0000 [----------------])
+[65] {04 004 000} TRAP 4 0 (PID: 1, PC: 4, Accumulator: 5, PSW: 0000 [----------------])
+[66] {0C 002 000} OS 2 0 (PC: 242, Accumulator: 5, PSW: 8080 [M-------X-------])
+        [67] Process [1 - programV2-2a] will transfer the control of the processor to process [2 - programV2-2c]
+        [67] Process [1 - programV2-2a] moving from the [EXECUTING] state to the [READY] state
+        [67] Process [2 - programV2-2c] moving from the [READY] state to the [EXECUTING] state
+        [67] Running Process Information:
+                [PID: 2, Priority: 5, WakeUp: 11, Queue: USER]
+        [67] Ready-to-run processes queue:
+        USER:[1,5]
+        DAEMONS:[3,100]
+        [67] SLEEPING Queue:
+                [--- empty queue ---]
+        [67] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 1 -> programV2-2a
+                PID: 2 -> programV2-2c
+                PID: 3 -> SystemIdleProcess
+[68] {0D 000 000} IRET 0 0 (PID: 2, PC: 3, Accumulator: 2, PSW: 0000 [----------------])
+[69] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 2, PSW: 8080 [M-------X-------])
+        [70] Clock interrupt number [13] has occurred
+[71] {0D 000 000} IRET 0 0 (PID: 2, PC: 3, Accumulator: 2, PSW: 0000 [----------------])
+[72] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 2, PSW: 8080 [M-------X-------])
+        [73] Clock interrupt number [14] has occurred
+[74] {0D 000 000} IRET 0 0 (PID: 2, PC: 3, Accumulator: 2, PSW: 0000 [----------------])
+[75] {04 004 000} TRAP 4 0 (PID: 2, PC: 4, Accumulator: 2, PSW: 0000 [----------------])
+[76] {0C 002 000} OS 2 0 (PC: 242, Accumulator: 2, PSW: 8080 [M-------X-------])
+        [77] Process [2 - programV2-2c] will transfer the control of the processor to process [1 - programV2-2a]
+        [77] Process [2 - programV2-2c] moving from the [EXECUTING] state to the [READY] state
+        [77] Process [1 - programV2-2a] moving from the [READY] state to the [EXECUTING] state
+        [77] Running Process Information:
+                [PID: 1, Priority: 5, WakeUp: 11, Queue: USER]
+        [77] Ready-to-run processes queue:
+        USER:[2,5]
+        DAEMONS:[3,100]
+        [77] SLEEPING Queue:
+                [--- empty queue ---]
+        [77] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 1 -> programV2-2a
+                PID: 2 -> programV2-2c
+                PID: 3 -> SystemIdleProcess
+[78] {0D 000 000} IRET 0 0 (PID: 1, PC: 4, Accumulator: 5, PSW: 0000 [----------------])
+[79] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 5, PSW: 8080 [M-------X-------])
+        [80] Clock interrupt number [15] has occurred
+[81] {0D 000 000} IRET 0 0 (PID: 1, PC: 4, Accumulator: 5, PSW: 0000 [----------------])
+[82] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 5, PSW: 8080 [M-------X-------])
+        [83] Clock interrupt number [16] has occurred
+[84] {0D 000 000} IRET 0 0 (PID: 1, PC: 4, Accumulator: 5, PSW: 0000 [----------------])
+[85] {04 003 000} TRAP 3 0 (PID: 1, PC: 5, Accumulator: 5, PSW: 0000 [----------------])
+[86] {0C 002 000} OS 2 0 (PC: 242, Accumulator: 5, PSW: 8080 [M-------X-------])
+        [87] Process [1 - programV2-2a] has requested to terminate
+        [87] Process [1 - programV2-2a] moving from the [EXECUTING] state to the [EXIT] state
+        [87] Process [2 - programV2-2c] moving from the [READY] state to the [EXECUTING] state
+        [87] Running Process Information:
+                [PID: 2, Priority: 5, WakeUp: 11, Queue: USER]
+        [87] Ready-to-run processes queue:
+        USER:
+        DAEMONS:[3,100]
+        [87] SLEEPING Queue:
+                [--- empty queue ---]
+        [87] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 1 -> programV2-2a
+                PID: 2 -> programV2-2c
+                PID: 3 -> SystemIdleProcess
+[88] {0D 000 000} IRET 0 0 (PID: 2, PC: 4, Accumulator: 2, PSW: 0000 [----------------])
+[89] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 2, PSW: 8080 [M-------X-------])
+        [90] Clock interrupt number [17] has occurred
+[91] {0D 000 000} IRET 0 0 (PID: 2, PC: 4, Accumulator: 2, PSW: 0000 [----------------])
+[92] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 2, PSW: 8080 [M-------X-------])
+        [93] Clock interrupt number [18] has occurred
+[94] {0D 000 000} IRET 0 0 (PID: 2, PC: 4, Accumulator: 2, PSW: 0000 [----------------])
+[95] {0D 000 000} IRET 0 0 (PID: 2, PC: 4, Accumulator: 2, PSW: 0000 [----------------])
+[96] {0C 006 000} OS 6 0 (PC: 244, Accumulator: 2, PSW: 8080 [M-------X-------])
+        [97] Process [2 - programV2-2c] has generated an exception and is terminating
+        [97] Process [2 - programV2-2c] moving from the [EXECUTING] state to the [EXIT] state
+        [97] Process [3 - SystemIdleProcess] moving from the [READY] state to the [EXECUTING] state
+        [97] Running Process Information:
+                [PID: 3, Priority: 100, WakeUp: 0, Queue: DAEMONS]
+        [97] Ready-to-run processes queue:
+        USER:
+        DAEMONS:
+        [97] SLEEPING Queue:
+                [--- empty queue ---]
+        [97] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 1 -> programV2-2a
+                PID: 2 -> programV2-2c
+                PID: 3 -> SystemIdleProcess
+[98] {0D 000 000} IRET 0 0 (PID: 3, PC: 183, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[99] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+        [100] Clock interrupt number [19] has occurred
+[101] {0D 000 000} IRET 0 0 (PID: 3, PC: 183, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[102] {0C 009 000} OS 9 0 (PC: 246, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+        [103] Clock interrupt number [20] has occurred
+[104] {0D 000 000} IRET 0 0 (PID: 3, PC: 183, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[105] {04 003 000} TRAP 3 0 (PID: 3, PC: 184, Accumulator: 0, PSW: 0082 [--------X-----Z-])
+[106] {0C 002 000} OS 2 0 (PC: 242, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+        [107] Process [3 - SystemIdleProcess] has requested to terminate
+        [107] Process [3 - SystemIdleProcess] moving from the [EXECUTING] state to the [EXIT] state
+        [107] The system will shut down now...
+        [107] Running Process Information:
+                [--- No running process ---]
+        [107] Ready-to-run processes queue:
+        USER:
+        DAEMONS:
+        [107] SLEEPING Queue:
+                [--- empty queue ---]
+        [107] PID association with program's name:
+                PID: 0 -> programV2-2b
+                PID: 1 -> programV2-2a
+                PID: 2 -> programV2-2c
+                PID: 3 -> SystemIdleProcess
+[108] {0D 000 000} IRET 0 0 (PID: -1, PC: 241, Accumulator: 0, PSW: 8082 [M-------X-----Z-])
+[109] {0B 000 000} HALT 0 0 (PID: -1, PC: 241, Accumulator: 0, PSW: 8083 [M-------X-----ZS])
+END of the simulation

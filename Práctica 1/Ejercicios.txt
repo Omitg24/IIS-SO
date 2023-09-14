@@ -1,0 +1,114 @@
+Permisos:
+-	---	---	---
+Type	Owner   Group 	Rest
+r -> 4
+w -> 2
+x -> 1
+
+Procesos:
+jobs -> Procesos en segundo plano (o parados)
+fg <n Proceso> -> Pasar a primer plano
+bg <n Proceso> -> Pasar a segundo plano
+ps x -> Más info de los procesos
+
+Ejercicios 1.1:
+1. Mediante putty
+2. passwd
+3. Ejecutar los comandos
+4. El manual de la intrucción. 
+5. help; help <command>
+6. man; man <command>
+7. history
+8. !...
+9. N<tab>
+10. Flecha arriba; history
+
+Ejercicios 1.2:
+11. p<tab><tab>; pa<tab><tab>; pas<tab><tab>
+12. Flecha arriba.
+13. Help si es interna, man si es externa; help <command> o man <command>
+14. Imprime descripciones de páginas de manual
+15. man -k
+16.a. !!
+16.b. !-6
+16.c. !"hi"
+
+Ejercicios 2.1:
+1. cd / -> pwd -> cd o cd ~
+2. cd /etc -> nano ... o nano /root/etc/...
+3. cd / -> Todos son directorios
+4. nano fichero -> ln fichero fichero2 -> ls -l
+5. ls > listado.txt -> ls -l
+6. chmod 400 listado.txt -> ls -l
+7. mkdir prueba -> cp fichero fichero2 fichero3 listado.txt prueba/ -> chmod 400 prueba/ -> ls -l 
+	-> No puedes, porque no tienes el permiso de ejecución 
+	-> Puedes ver el contenido, permiso de lectura
+8. chmod 100 prueba/ 
+	-> Si, porque tienes el permiso de ejecución 
+	-> No, porque no tienes el permiso de lectura
+9. ls [A-z]??
+10. ls *.*
+
+Ejercicios 2.2:
+11. cd /etc -> nano passwd | nano group
+12. cd $HOME -> ls -l -> mkdir prueba12 -> ls -l
+13. man ls -> Alfabeticamente
+14. ls [aA]*[0-9]
+15. ls [!.c]
+16. ls ??*
+17. ls -l
+18. cd /dev -> ls -l
+19. man df -> Muestra el espacio usado en el disco -> df
+20. man mount -> Monta un sistema de ficheros -> mount ...
+21. man quota -> Muestra el uso del disco y los limites -> quota ... 
+22. Escritura y ejecución en el directorio y escritura en el fichero
+23. Ejecución sobre el directorio y el fichero
+24. Ejecución sobre el directorio y escritura sobre el fichero
+25. Ejecución sobre el directorio y lectura sobre el fichero
+26. Ejecución sobre el directorio y escritura sobre el fichero
+27. rm *
+28. rm -r <directorio>
+29. cd ../<directorio>
+30. ls -l
+31. ls -l ..
+32. cp * /tmp
+33. cp <fichero1>... /tmp
+34. mkdir d1/<directorio>
+
+Ejercicios 3.1:
+1. who
+2. El segundo lo lanza en segundo plano para seguir ejecutando la terminal.
+3. Bucle infinito -> Ctrl + C
+4. ps
+5. Uno muestra los usuarios conectados (who) y otro muestra información del usuario seleccionado (finger)
+6. top
+7. kill -9 <PID>
+
+Ejercicios 3.2:
+8. ps
+9. (<proceso>)&
+10. jobs -> bg (<N_Proceso> o %<N_Proceso>)
+11. ^P o (stty susp (Ctrl+V) ^P)
+12. jobs
+13. Abrir otra terminal -> ps x(a) -> kill -9 <PID_Proceso>
+14. kill -9 <PID_Proceso>, killall <Nombre_Proceso>
+15. man ps
+16. <NO SE PUEDE HACER>
+17. <NO SE PUEDE HACER>
+18. <NO SE PUEDE HACER>
+
+Examen practico 1 Ejemplo:
+1. expresión regular para obtener el nombre de los ficheros que contienen "_" 
+pero que no esté ni en la primera ni en la última posición.
+	[!_]*[!_]
+2. orden para borrar todos los ficheros de un directorio pero sin 
+borrar los directorios que este contenga.
+	rm *
+3. orden para parar un proceso en segundo plano 
+	kill -19 <PID_Proceso>
+4. orden para reanudar un proceso en segundo plano
+	bg <N_Proceso> o %<N_Proceso>
+5. decir los permisos necesarios para modificar un fichero que está en un directorio 
+	Ejecución sobre el directorio y escritura sobre el fichero.
+6. orden para ejecutar la orden que ejecutaste 15 instrucciones antes
+	!-15

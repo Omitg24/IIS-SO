@@ -1,0 +1,3 @@
+1,{%s}
+3, %s %d %d (PC: @R%d@@, Accumulator: @R%d@@ [@R%x@@], PSW: @R%x@@)\n
+99, END of the simulation\n

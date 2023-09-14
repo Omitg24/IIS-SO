@@ -1,0 +1,8 @@
+{
+    "debug.inlineValues": true,
+    "files.associations": {
+        "*.def": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled",
+
+}

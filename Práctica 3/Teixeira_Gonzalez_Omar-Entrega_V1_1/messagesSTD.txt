@@ -1,0 +1,7 @@
+// Students created messages
+// Format: numberOfMessage,textPrintfFormatedWithColourCodes
+//
+// numbers of messages greather than 100 for students
+//
+101,User program list:\n
+102,\tProgram [@C%s@@] with arrival time [@C%d@@]\n

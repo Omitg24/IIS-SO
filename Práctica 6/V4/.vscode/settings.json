@@ -1,0 +1,7 @@
+{
+    "debug.inlineValues": true,
+    "files.associations": {
+        "*.def": "c"
+    },
+
+}

@@ -1,0 +1,51 @@
+30 messages loaded from file messagesTCH.txt
+10 messages loaded from file messagesSTD.txt
+0 Asserts Loaded
+User program list:
+	Program [[1;36mprogramV1-2a[0m] with arrival time [[1;36m0[0m]
+[0m	Program [[1;36mprogramV1-2b[0m] with arrival time [[1;36m0[0m]
+[0m	Program [[1;36mprogramV1-2c[0m] with arrival time [[1;36m0[0m]
+[0mNew process [[1;32m3 - SystemIdleProcess[0m] moving to the [[1;32mNEW[0m] state
+[0m[1;32mProcess [3] created from program [SystemIdleProcess][0m
+[0mProcess [[1;32m3 - SystemIdleProcess[0m] moving from the [[1;32mNEW[0m] state to the [[1;32mREADY[0m] state
+[0mReady-to-run processes queue:
+	New process [[1;32m0 - programV1-2a[0m] moving to the [[1;32mNEW[0m] state
+[0m[1;32mProcess [0] created from program [programV1-2a][0m
+[0mProcess [[1;32m0 - programV1-2a[0m] moving from the [[1;32mNEW[0m] state to the [[1;32mREADY[0m] state
+[0mReady-to-run processes queue:
+	New process [[1;32m1 - programV1-2b[0m] moving to the [[1;32mNEW[0m] state
+[0m[1;32mProcess [1] created from program [programV1-2b][0m
+[0mProcess [[1;32m1 - programV1-2b[0m] moving from the [[1;32mNEW[0m] state to the [[1;32mREADY[0m] state
+[0mReady-to-run processes queue:
+	New process [[1;32m2 - programV1-2c[0m] moving to the [[1;32mNEW[0m] state
+[0m[1;32mProcess [2] created from program [programV1-2c][0m
+[0mProcess [[1;32m2 - programV1-2c[0m] moving from the [[1;32mNEW[0m] state to the [[1;32mREADY[0m] state
+[0mReady-to-run processes queue:
+	Process [[1;32m2 - programV1-2c[0m] moving from the [[1;32mREADY[0m] state to the [[1;32mEXECUTING[0m] state
+[0mNew Tick (1)
+{0D 000 000} IRET 0 0 (PC: [1;31m0[0m, Accumulator: [1;31m0[0m, PSW: [1;31m0002[0m [[1;31m--------------Z-[0m])
+[0mNew Tick (2)
+{01 00A 005} ADD 10 5 (PC: [1;31m1[0m, Accumulator: [1;31m15[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0mNew Tick (3)
+{04 003 000} TRAP 3 0 (PC: [1;31m2[0m, Accumulator: [1;31m15[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0mNew Tick (4)
+{0C 002 000} OS 2 0 (PC: [1;31m242[0m, Accumulator: [1;31m15[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0mNew Tick (5)
+[1;31mProcess [2 - programV1-2c] has requested to terminate[0m
+[0mProcess [[1;32m2 - programV1-2c[0m] moving from the [[1;32mEXECUTING[0m] state to the [[1;32mEXIT[0m] state
+[0mProcess [[1;32m0 - programV1-2a[0m] moving from the [[1;32mREADY[0m] state to the [[1;32mEXECUTING[0m] state
+[0mNew Tick (6)
+{0D 000 000} IRET 0 0 (PC: [1;31m0[0m, Accumulator: [1;31m15[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0mNew Tick (7)
+{01 014 00A} ADD 20 10 (PC: [1;31m1[0m, Accumulator: [1;31m30[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0mNew Tick (8)
+{04 004 000} TRAP 4 0 (PC: [1;31m2[0m, Accumulator: [1;31m30[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0mNew Tick (9)
+{0C 002 000} OS 2 0 (PC: [1;31m242[0m, Accumulator: [1;31m30[0m, PSW: [1;31m0080[0m [[1;31m--------X-------[0m])
+[0mNew Tick (10)
+New Tick (11)
+{0D 000 000} IRET 0 0 (PC: [1;31m2[0m, Accumulator: [1;31m30[0m, PSW: [1;31m0000[0m [[1;31m----------------[0m])
+[0mNew Tick (12)
+{0B 000 000} HALT 0 0 (PC: [1;31m2[0m, Accumulator: [1;31m30[0m, PSW: [1;31m0001[0m [[1;31m---------------S[0m])
+[0m[1;31mEND of the simulation
+[0m[0m

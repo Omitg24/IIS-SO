@@ -1,0 +1,8 @@
+55 
+33
+ADD 2 0
+INC -1
+TRAP 7
+ZJUMP 2
+JUMP -3
+TRAP 3

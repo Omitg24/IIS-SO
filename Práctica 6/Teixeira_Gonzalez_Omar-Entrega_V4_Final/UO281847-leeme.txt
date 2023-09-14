@@ -1,0 +1,18 @@
+Teixeira González, Omar
+UO281847
+
+Salidas empleadas:
+	./Simulator --debugSections=a programV4-1 0 programV4-2 22 programV4-3 44 programV4-4 66 > V4-1-outputOmar.log
+	./Simulator --debugSections=a programV4-1 0 programV4-2 0 programV4-3 10 programV4-4 10 programV4-5 20 programV4-6 25 > V4-2-outputOmar.log
+
+Configuración de memoria para ambos:
+4
+12
+16
+96
+64
+16
+32
+
+Ya se ha acabado :-(
+Como ya dije, ha sido un placer! Gracias por todo!

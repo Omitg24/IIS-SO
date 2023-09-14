@@ -1,0 +1,8 @@
+1
+55
+ADD 1 1
+ADD 2 2
+ADD 3 3
+ADD 4 4
+TRAP 3
+

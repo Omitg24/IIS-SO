@@ -1,0 +1,7 @@
+30
+5
+NOP
+ADD 2 0
+TRAP 7
+TRAP 4
+IRET

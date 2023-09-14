@@ -1,0 +1,37 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build Simulator with make",
+            "command": "/usr/bin/make",
+            "args": [
+                "Simulator"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build Simulator with make"
+        },
+        {
+            "type": "shell",
+            "label": "Clean Simulator with make",
+            "command": "/usr/bin/make",
+            "args": [
+                "clean"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "none",
+            "detail": "Clean Simulator with make"
+        }
+    ],
+    "version": "2.0.0"
+}
